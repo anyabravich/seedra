@@ -6,7 +6,7 @@ import Container from "../Container";
 import Categories from "../Categories";
 import Cards from "../Cards";
 import Button from "../Button";
-import { CARDS } from "./data";
+import { PRODUCTS } from "./data";
 
 const Products = () => {
   const [category, setCategory] = useState("all");
@@ -17,9 +17,13 @@ const Products = () => {
     setActiveIndex(index);
   };
 
-  const filteredCards = CARDS.filter((card) => card.category === category);
+  const filteredCards = PRODUCTS.filter((card) => card.category === category);
   const cardsView =
-    filteredCards.length > 0 ? filteredCards : category === "all" ? CARDS : [];
+    filteredCards.length > 0
+      ? filteredCards
+      : category === "all"
+      ? PRODUCTS
+      : [];
 
   return (
     <section className={styles.products}>
@@ -27,7 +31,7 @@ const Products = () => {
         <header className={styles.products__header}>
           <h2 className={`${styles.products__title} h2`}>Our products</h2>
           <Button className={`${styles.products__button}`} variant="border">
-            View all ({CARDS.length})
+            View all ({PRODUCTS.length})
           </Button>
         </header>
         <Categories

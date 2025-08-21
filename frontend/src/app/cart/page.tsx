@@ -2,7 +2,7 @@
 
 import Checkout from "@/components/Checkout";
 import Container from "@/components/Container";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Cart = () => {
   const [goods, setGoods] = useState([]);

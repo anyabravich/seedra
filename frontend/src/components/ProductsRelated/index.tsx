@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Card from "../Card";
-import { CARDS } from "../Products/data";
+import { PRODUCTS } from "../Products/data";
 
 const ProductsRelated = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -28,7 +28,7 @@ const ProductsRelated = () => {
       <div className={`slider`}>
         {isMobile ? (
           <Swiper slidesPerView={1.08} spaceBetween={11}>
-            {CARDS.map((props) => (
+            {PRODUCTS.map((props) => (
               <SwiperSlide key={props.id}>
                 <Card {...props} />
               </SwiperSlide>
@@ -36,7 +36,7 @@ const ProductsRelated = () => {
           </Swiper>
         ) : (
           <div className={styles["products-related__cards"]}>
-            {CARDS.map((props) => (
+            {PRODUCTS.map((props) => (
               <div key={props.id}>
                 <Card {...props} />
               </div>

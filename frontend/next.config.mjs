@@ -12,6 +12,9 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "src/styles")],
     prependData: `@import "constants.scss"; @import "mixins.scss"; @import "global.scss";`,
   },
+  images: {
+    domains: ["swiperjs.com"],
+  },
 };
 
 export default nextConfig;

@@ -1,8 +1,5 @@
 import Container from "@/components/Container";
-import React from "react";
 
-const Contacts = () => {
-  return <Container>Contacts</Container>;
-};
+const Contacts = () => <Container>Contacts</Container>;
 
 export default Contacts;

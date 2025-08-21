@@ -1,19 +1,25 @@
-import Container from "@/components/Container";
-import React from "react";
 import styles from "./page.module.scss";
+
+import Container from "@/components/Container";
 import ProductsGallery from "@/components/ProductsGallery";
 import Label from "@/components/Label";
-import Quantity from "@/components/Quantity";
 import Input from "@/components/Input";
 import { packages } from "./data";
 import Button from "@/components/Button";
 import Favorite from "@/components/Icons/Icons/Favorite";
 import ProductsRelated from "@/components/ProductsRelated";
+import { getProductById } from "@/components/Products/data";
 
-const Products = async ({ params }: { params: { id: string } }) => {
-  const { id } = params;
+const Products = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
 
-  console.log(id);
+  const product = await getProductById(+id);
+
+  if (!product) return null;
+
+  const { title, category } = product;
+
+  console.log(product);
 
   return (
     <section className={styles["products"]}>
@@ -23,13 +29,13 @@ const Products = async ({ params }: { params: { id: string } }) => {
             <ProductsGallery />
           </div>
           <div className={styles["products__info"]}>
-            {/* <h1 className={`${styles["products__title"]} h3`}>{name}</h1> */}
+            <h1 className={`${styles["products__title"]} h3`}>{title}</h1>
             <ul className={styles["products__labels"]}>
               <li className={styles["products__label"]}>
                 <Label text="available" />
               </li>
               <li className={styles["products__label"]}>
-                {/* <Label text={category.toLowerCase()} /> */}
+                <Label text={category.toLowerCase()} />
               </li>
             </ul>
             <div
@@ -40,14 +46,15 @@ const Products = async ({ params }: { params: { id: string } }) => {
                   <span>Size</span>
                   <span>2 pack</span>
                 </p>
-                {/* <Quantity /> */}
+                {/* каунтер */}
               </header>
             </div>
             <div
               className={`${styles["products__packages"]} ${styles["packages"]}`}
             >
-              {packages.map(({ name, price }) => (
+              {packages.map(({ name, price }, index) => (
                 <Input
+                  key={index}
                   className={"_package"}
                   label={name}
                   type="radio"

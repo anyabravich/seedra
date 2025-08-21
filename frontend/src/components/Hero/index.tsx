@@ -22,10 +22,12 @@ const Hero = () => {
             ></p>
             <div className={`${styles.hero__prices} ${styles.prices}`}>
               <div className={styles.prices__item}>
-                <img
+                <Image
                   className={styles.prices__fire}
                   src="/fire.svg"
                   alt="fire"
+                  width={46}
+                  height={46}
                 />
                 <span className={styles.prices__new}>$12.56</span>
               </div>

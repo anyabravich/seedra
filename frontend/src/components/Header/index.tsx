@@ -7,13 +7,14 @@ import Search from "../Search";
 import Button from "../Button";
 import Favorite from "../Icons/Icons/Favorite";
 import { menu } from "./data";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <Container className={styles.header__container}>
         <Link className={styles.header__logo} href="/">
-          <img src="/logo.svg" alt="logo" />
+          <Image src="/logo.svg" alt="logo" width={97} height={21} />
         </Link>
         <nav className={styles.header__nav}>
           <ul className={`${styles.header__menu} ${styles.menu}`}>

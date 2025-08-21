@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
 import styles from "./page.module.scss";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Rating from "../Rating";
 import Icons from "../Icons";
@@ -9,7 +10,7 @@ import Favorite from "../Icons/Icons/Favorite";
 import Link from "next/link";
 import { IProduct } from "../Products/types";
 
-const Card = ({ id, title, price, url = "/" }: IProduct) => {
+const Card = ({ id, title, price, url }: IProduct) => {
   const [state, setState] = useState({
     favorite: false,
     goods: false,
@@ -25,7 +26,7 @@ const Card = ({ id, title, price, url = "/" }: IProduct) => {
       favorite: isFavorite,
       goods: isGoods,
     });
-  }, [id]);
+  }, [id, favorites, goods]);
 
   const handleToggle = (type: "favorite" | "goods") => {
     const storageKey = type === "favorite" ? "favorites" : "goods";
@@ -34,7 +35,7 @@ const Card = ({ id, title, price, url = "/" }: IProduct) => {
     if (index !== -1) {
       items.splice(index, 1);
     } else {
-      items.push({ id, name, price, url });
+      items.push({ id, title, price, url });
     }
     localStorage.setItem(storageKey, JSON.stringify(items));
     setState((prevState) => ({ ...prevState, [type]: !prevState[type] }));
