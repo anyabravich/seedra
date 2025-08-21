@@ -4,23 +4,21 @@ import Container from "../Container";
 import Image from "next/image";
 import Button from "../Button";
 
-interface IHero {
-  caption: string;
-  description: string;
-  priceActual: number;
-  priceOld: number;
-}
-
-const Hero = ({ caption, description, priceActual, priceOld }: IHero) => {
+const Hero = () => {
   return (
     <section className={styles.hero}>
       <Container className={styles.hero__container}>
         <div className={styles.hero__inner}>
           <div className={styles.hero__content}>
-            <h1 className={`${styles.hero__title} h1`}>{caption}</h1>
+            <h1 className={`${styles.hero__title} h1`}>
+              SEEDRA Basil Seeds for Indoor and Outdoor Planting
+            </h1>
             <p
               className={`${styles.hero__description} light-16`}
-              dangerouslySetInnerHTML={{ __html: description }}
+              dangerouslySetInnerHTML={{
+                __html:
+                  "Be sure of our quality - the freshest batches of this season. Non-GMO, Heirloom - our seeds were tested and have the best germination ratings. Your easy growing experience is our guarantee",
+              }}
             ></p>
             <div className={`${styles.hero__prices} ${styles.prices}`}>
               <div className={styles.prices__item}>
@@ -29,11 +27,9 @@ const Hero = ({ caption, description, priceActual, priceOld }: IHero) => {
                   src="/fire.svg"
                   alt="fire"
                 />
-                <span className={styles.prices__new}>${priceActual}</span>
+                <span className={styles.prices__new}>$12.56</span>
               </div>
-              {priceOld && (
-                <span className={styles.prices__old}>${priceOld}</span>
-              )}
+              <span className={styles.prices__old}>$15.56</span>
             </div>
             <div className={styles.hero__buttons}>
               <Button variant="primary">Add to card</Button>

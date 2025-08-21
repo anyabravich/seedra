@@ -7,10 +7,9 @@ import { useMediaQuery } from "react-responsive";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { IProduct } from "../Products/types";
 
-import { ICard } from "../Products";
-
-const Cards = ({ cards }: { cards: ICard[] }) => {
+const Cards = ({ cards }: { cards: IProduct[] }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [hasMounted, setHasMounted] = useState(false);
 

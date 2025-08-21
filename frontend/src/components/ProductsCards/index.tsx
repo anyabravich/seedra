@@ -1,18 +1,17 @@
-import React from "react";
-
 import styles from "./page.module.scss";
+
 import Card from "../Card";
-import { ICard } from "../Products";
+import { IProduct } from "../Products/types";
 
 const ProductsCards = ({
   products: { cards },
 }: {
-  products: { cards: ICard[] };
+  products: { cards: IProduct[] };
 }) => {
   return (
     <div className={styles["products-cards"]}>
-      {cards.map(({ id, name, price = "12.56", url }, index) => (
-        <Card id={id} key={index} name={name} price={price} url={url} />
+      {cards.map((props) => (
+        <Card key={props.id} {...props} />
       ))}
     </div>
   );

@@ -14,6 +14,7 @@ type Swiper = any;
 
 const ProductsGallery = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | null>(null);
+
   return (
     <div>
       <Swiper

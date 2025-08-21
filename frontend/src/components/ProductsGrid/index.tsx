@@ -3,10 +3,10 @@ import Filters from "../Filters";
 import ProductsCards from "../ProductsCards";
 
 import styles from "./page.module.scss";
-import { ICard } from "../Products";
+import { IProduct } from "../Products/types";
 
 interface IProductsGrid {
-  products: { cards: ICard[] };
+  products: { cards: IProduct[] };
 }
 
 const ProductsGrid = (products: IProductsGrid) => {

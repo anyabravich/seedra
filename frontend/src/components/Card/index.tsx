@@ -7,14 +7,9 @@ import Rating from "../Rating";
 import Icons from "../Icons";
 import Favorite from "../Icons/Icons/Favorite";
 import Link from "next/link";
-import { ICard } from "../Products";
+import { IProduct } from "../Products/types";
 
-const Card = ({
-  id = 1,
-  name = "Tomato",
-  price = "12.56",
-  url = "/",
-}: ICard) => {
+const Card = ({ id, title, price, url = "/" }: IProduct) => {
   const [state, setState] = useState({
     favorite: false,
     goods: false,
@@ -70,7 +65,7 @@ const Card = ({
       <div className={styles.card__content}>
         <Rating rating={4.5} ratingCount={123} />
         <Link className={styles.card__title} href={url || "/products"}>
-          {name}
+          {title}
         </Link>
         <footer className={styles.card__footer}>
           <p className={styles.card__price}>${price}</p>

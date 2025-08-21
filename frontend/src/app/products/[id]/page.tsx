@@ -9,13 +9,11 @@ import { packages } from "./data";
 import Button from "@/components/Button";
 import Favorite from "@/components/Icons/Icons/Favorite";
 import ProductsRelated from "@/components/ProductsRelated";
-import { fetchData } from "@/utils/fetchData";
 
 const Products = async ({ params }: { params: { id: string } }) => {
   const { id } = params;
 
-  const url = `${process.env.BACKEND_URL}products/${id}`;
-  const { name, category } = await fetchData(url);
+  console.log(id);
 
   return (
     <section className={styles["products"]}>
@@ -25,13 +23,13 @@ const Products = async ({ params }: { params: { id: string } }) => {
             <ProductsGallery />
           </div>
           <div className={styles["products__info"]}>
-            <h1 className={`${styles["products__title"]} h3`}>{name}</h1>
+            {/* <h1 className={`${styles["products__title"]} h3`}>{name}</h1> */}
             <ul className={styles["products__labels"]}>
               <li className={styles["products__label"]}>
                 <Label text="available" />
               </li>
               <li className={styles["products__label"]}>
-                <Label text={category.toLowerCase()} />
+                {/* <Label text={category.toLowerCase()} /> */}
               </li>
             </ul>
             <div
@@ -42,7 +40,7 @@ const Products = async ({ params }: { params: { id: string } }) => {
                   <span>Size</span>
                   <span>2 pack</span>
                 </p>
-                <Quantity />
+                {/* <Quantity /> */}
               </header>
             </div>
             <div
