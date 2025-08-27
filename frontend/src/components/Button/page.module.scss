@@ -11,35 +11,131 @@
   border-radius: rem(8);
   height: rem(51);
   letter-spacing: -0.03em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
   @media (max-width: $tablet) {
     font-size: rem(14);
     height: rem(47);
   }
+
+  // Варианты кнопок
   &._primary {
     color: var(--white);
     background: var(--green-brand);
-    &:hover {
+    &:hover:not(:disabled) {
       background: var(--green-brand-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    &:active:not(:disabled) {
+      transform: translateY(0);
     }
   }
+
   &._secondary {
     color: var(--green-brand);
     background: var(--white);
-    &:hover {
+    &:hover:not(:disabled) {
       background: var(--invisible-green);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    &:active:not(:disabled) {
+      transform: translateY(0);
     }
   }
+
   &._border {
     color: var(--green-brand);
+    background: transparent;
     border: 1px solid var(--light-grey-stroke);
+    &:hover:not(:disabled) {
+      border-color: var(--green-brand);
+      background: var(--invisible-green);
+      transform: translateY(-2px);
+    }
+    &:active:not(:disabled) {
+      transform: translateY(0);
+    }
   }
+
   &._icon {
     padding: 0;
     height: auto;
     border-radius: 0;
+    background: transparent;
+    &:hover:not(:disabled) {
+      transform: scale(1.1);
+    }
   }
+
+  // Размеры кнопок
+  &._small {
+    font-size: rem(12);
+    padding: rem(8) rem(20);
+    height: rem(40);
+    @media (max-width: $tablet) {
+      font-size: rem(11);
+      height: rem(36);
+    }
+  }
+
+  &._medium {
+    // Размер по умолчанию
+  }
+
+  &._large {
+    font-size: rem(18);
+    padding: rem(14) rem(40);
+    height: rem(60);
+    @media (max-width: $tablet) {
+      font-size: rem(16);
+      height: rem(56);
+    }
+  }
+
+  // Состояния
+  &._fullWidth {
+    width: 100%;
+  }
+
+  &._loading {
+    cursor: wait;
+    pointer-events: none;
+  }
+
+  &._disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &:hover {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  // Спиннер загрузки
+  .loadingSpinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(14);
+    color: inherit;
+  }
+
+  // Ссылки внутри кнопки
   a {
     text-decoration: none;
     color: currentColor;
+  }
+
+  // Фокус для доступности
+  &:focus-visible {
+    outline: 2px solid var(--green-brand);
+    outline-offset: 2px;
   }
 }

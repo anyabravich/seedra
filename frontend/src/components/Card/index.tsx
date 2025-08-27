@@ -16,27 +16,30 @@ const Card = ({ id, title, price, url }: IProduct) => {
     goods: false,
   });
 
-  const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
-  const goods = JSON.parse(localStorage.getItem("goods") || "[]");
-
   useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+    const goods = JSON.parse(localStorage.getItem("goods") || "[]");
+
     const isFavorite = favorites.some((item: any) => item.id === id);
     const isGoods = goods.some((item: any) => item.id === id);
+
     setState({
       favorite: isFavorite,
       goods: isGoods,
     });
-  }, [id, favorites, goods]);
+  }, [id]);
 
   const handleToggle = (type: "favorite" | "goods") => {
     const storageKey = type === "favorite" ? "favorites" : "goods";
     const items = JSON.parse(localStorage.getItem(storageKey) || "[]");
     const index = items.findIndex((item: any) => item.id === id);
+
     if (index !== -1) {
       items.splice(index, 1);
     } else {
       items.push({ id, title, price, url });
     }
+
     localStorage.setItem(storageKey, JSON.stringify(items));
     setState((prevState) => ({ ...prevState, [type]: !prevState[type] }));
   };

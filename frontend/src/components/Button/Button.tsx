@@ -35,10 +35,7 @@ const Button: React.FC<ButtonProps> = ({
       {...restProps}
     >
       {loading ? (
-        <span className={styles.loadingSpinner}>
-          {/* Здесь можно добавить спиннер */}
-          Loading...
-        </span>
+        <span className={styles.loadingSpinner}>Loading...</span>
       ) : (
         children
       )}

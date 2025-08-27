@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./page.module.scss";
 import Button from "../Button";
 import Image from "next/image";

@@ -1,8 +1,5 @@
 import Container from "@/components/Container";
-import React from "react";
 
-const Blog = () => {
-  return <Container>Blog</Container>;
-};
+const Page = () => <Container>Blog</Container>;
 
-export default Blog;
+export default Page;

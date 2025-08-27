@@ -23,5 +23,12 @@
   &__single-value {
     display: flex;
     flex-direction: column;
+    gap: rem(1);
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
   }
 }
