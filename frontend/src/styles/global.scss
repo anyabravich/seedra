@@ -1,0 +1,56 @@
+.animated {
+  @extend .transition-active;
+  &:hover {
+    @extend .transition-active;
+  }
+}
+
+.transition-active {
+  svg {
+    transition: color $default-transition-duration $default-transition-function,
+      background $default-transition-duration $default-transition-function,
+      opacity $default-transition-duration $default-transition-function,
+      width $default-transition-duration $default-transition-function,
+      height $default-transition-duration $default-transition-function,
+      fill $default-transition-duration $default-transition-function,
+      stroke $default-transition-duration $default-transition-function,
+      transform $default-transition-duration $default-transition-function,
+      box-shadow $default-transition-duration $default-transition-function,
+      border $default-transition-duration $default-transition-function;
+  }
+  transition: color $default-transition-duration $default-transition-function,
+    outline $default-transition-duration $default-transition-function,
+    width $default-transition-duration $default-transition-function,
+    height $default-transition-duration $default-transition-function,
+    padding $default-transition-duration $default-transition-function,
+    background-color $default-transition-duration $default-transition-function,
+    opacity $default-transition-duration $default-transition-function,
+    fill $default-transition-duration $default-transition-function,
+    stroke $default-transition-duration $default-transition-function,
+    transform $default-transition-duration $default-transition-function,
+    box-shadow $default-transition-duration $default-transition-function,
+    border $default-transition-duration $default-transition-function,
+    top $default-transition-duration $default-transition-function,
+    right $default-transition-duration $default-transition-function,
+    bottom $default-transition-duration $default-transition-function,
+    left $default-transition-duration $default-transition-function,
+    border-radius $default-transition-duration $default-transition-function;
+}
+
+.slider {
+  .swiper {
+    @media (max-width: $tablet) {
+      margin: 0 rem(-15);
+      padding: 0 rem(15);
+    }
+  }
+}
+
+#react-select-2-input,
+.css-mohuvp-dummyInput-DummyInput {
+  position: absolute !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}

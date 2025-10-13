@@ -1,0 +1,37 @@
+.accordion {
+  $this: &;
+  &:not(:first-of-type) {
+    margin-top: -1px;
+  }
+  &:last-of-type {
+    #{$this}__header {
+      border-bottom-color: transparent;
+    }
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: rem(42);
+    border-top: 1px solid var(--light-grey-stroke);
+    cursor: pointer;
+  }
+  &__content {
+    padding: rem(16) 0;
+    border-top: 1px solid var(--light-grey-stroke);
+  }
+  &__arrow {
+    --size: #{rem(24)};
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    svg,
+    i {
+      width: rem(12);
+      height: rem(7);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+Title: Home
+
+sections:
+  content:
+    type: fields
+    fields:
+      hero:
+        label: Hero
+        type: object
+        fields:
+          caption:
+            label: Caption
+            type: text
+          description:
+            label: Description
+            type: textarea
+          priceActual:
+            label: Price actual
+            type: number
+          priceOld:
+            label: Price old
+            type: number
+      banner:
+        label: Banner
+        type: object
+        fields:
+          caption:
+            label: Caption
+            type: text
+          description:
+            label: Description
+            type: textarea
+      products:
+        label: Products
+        type: object
+        fields:
+          caption:
+            label: Caption
+            type: text
+          cards:
+            label: Products cards
+            type: pages

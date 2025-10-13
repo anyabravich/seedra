@@ -1,0 +1,15 @@
+.categories {
+  display: flex;
+  gap: rem(8);
+  margin-bottom: rem(32);
+  overflow-x: auto;
+  @media (max-width: $tablet) {
+    margin: 0 rem(-15) rem(32);
+    padding: 0 rem(15);
+    gap: rem(16);
+    margin-bottom: rem(26);
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

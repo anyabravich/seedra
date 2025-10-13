@@ -1,0 +1,12 @@
+.products-grid {
+  display: grid;
+  gap: rem(32);
+  align-items: flex-start;
+  grid-template-columns: rem(253) 1fr;
+  padding-bottom: rem(40);
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+  }
+}

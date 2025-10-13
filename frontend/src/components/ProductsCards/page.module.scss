@@ -1,0 +1,9 @@
+.products-cards {
+  display: grid;
+  gap: rem(33);
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}

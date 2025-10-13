@@ -1,0 +1,34 @@
+.feedback-card {
+  border-radius: rem(12);
+  border: rem(1) solid var(--light-grey-stroke);
+  padding: rem(35);
+  @media (max-width: $tablet) {
+    padding: rem(22) rem(22);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    margin-bottom: rem(28);
+    @media (max-width: $tablet) {
+      gap: rem(19);
+      margin-bottom: rem(12);
+    }
+  }
+  &__image {
+    --size: #{rem(64)};
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    grid-column: 1;
+    @media (max-width: $tablet) {
+      --size: #{rem(40)};
+    }
+  }
+  &__time {
+    color: var(--text-secondary);
+  }
+  &__rating {
+    margin-bottom: rem(16);
+  }
+}

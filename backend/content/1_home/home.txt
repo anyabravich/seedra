@@ -1,0 +1,62 @@
+Title: Home
+
+----
+
+Hero:
+
+caption: >
+  SEEDRA Basil Seeds for Indoor and
+  Outdoor Planting
+description: 'Be sure of our quality - the freshest batches of this season. Non-GMO, Heirloom - our seeds were tested and have the best germination ratings. Your easy growing experience is our guarantee'
+priceactual: 12.56
+priceold: 15.56
+prices:
+  actual: "1"
+  old: "2"
+
+----
+
+Banner:
+
+caption: 'We sell seeds '
+description: >
+  that always sprout and gardening
+  supplies which never break
+
+----
+
+Products:
+
+caption: Our products.
+cards:
+  - page://kCeYyqVp0GthU4XW
+  - page://mCBDZV3HR7UeSEAC
+  - page://Fgg1qe98H1ARSkPL
+  - page://o0knA2eVKGlexdpJ
+0:
+  _id: da00b107-a52b-46d4-beac-c1f7e5a7298e
+  caption: ""
+  pages: [ ]
+1:
+  caption: null
+  pages: [ ]
+  _id: a1604fa5-7a65-477e-b542-880166ade9ae
+
+----
+
+Caption: Seedra
+
+----
+
+Description: Set how Kirby handles content. On this page Content file extension Set the extension you want to use for your content files.
+
+----
+
+Uuid: siriTATW76HJZaDv
+
+----
+
+Articles:
+
+caption: null
+pages: [ ]

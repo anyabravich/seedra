@@ -1,0 +1,26 @@
+.products-thumb {
+  height: rem(445);
+  margin-bottom: rem(22);
+  border-radius: rem(12);
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.products-preview {
+  .swiper-slide {
+    --size: #{rem(67)};
+    width: var(--size);
+    height: var(--size);
+    border-radius: rem(12);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,25 @@
+Title: Product
+
+fields:
+  name:
+    label: Name
+    type: text
+  category:
+    label: Category
+    type: select
+    options:
+      - text: Bundles
+        value: bundles
+      - text: Herbs
+        value: herbs
+      - text: Vegetables
+        value: vegetables
+      - text: Fruits
+        value: fruits
+      - text: Supplies
+        value: supplies
+      - text: Flowers
+        value: flowers
+  price:
+    label: Price
+    type: number

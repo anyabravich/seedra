@@ -1,0 +1,37 @@
+.quantity {
+  padding: rem(6) rem(14);
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: rem(11);
+  display: inline-flex;
+  align-items: center;
+  gap: rem(6);
+  &__button {
+    @include reset-btn();
+    --size: #{rem(16)};
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+    &[disabled] {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+  }
+  &__value {
+    --size: #{rem(32)};
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green-brand);
+    background: rgba(53, 151, 64, 0.08);
+    border-radius: rem(6);
+  }
+}

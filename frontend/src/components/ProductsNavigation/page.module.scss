@@ -1,0 +1,34 @@
+.products-navigation {
+  display: flex;
+  align-items: center;
+  gap: rem(26);
+  margin-bottom: rem(25);
+  height: rem(63);
+  @media (max-width: $tablet) {
+    height: rem(53);
+    margin-bottom: rem(16);
+  }
+  &__search {
+    height: 100%;
+    margin-right: 0;
+    @media (max-width: $tablet) {
+      display: flex;
+    }
+  }
+  &__select {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  &__single-value {
+    display: flex;
+    flex-direction: column;
+    gap: rem(1);
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+}

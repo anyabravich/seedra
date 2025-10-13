@@ -1,0 +1,26 @@
+.checkout {
+  display: grid;
+  gap: rem(60);
+  grid-template-columns: auto rem(350);
+  &__list {
+    display: flex;
+    gap: rem(30);
+    flex-direction: column;
+  }
+}
+
+.summary {
+  padding: rem(24) rem(34);
+  box-shadow: 0 rem(4) rem(12) 0 rgba(207, 207, 207, 0.25);
+  &__title {
+    font-weight: 700;
+    line-height: 1.55;
+    font-size: rem(18);
+    margin-bottom: rem(14);
+    @include letter-spacing-em(-0.36, 18);
+  }
+  &__total {
+    display: flex;
+    justify-content: space-between;
+  }
+}

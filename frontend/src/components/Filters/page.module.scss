@@ -1,0 +1,21 @@
+.filters {
+  &._hide-mobile {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+  &__title {
+    margin-bottom: rem(9);
+    @media (max-width: $tablet) {
+      margin-bottom: rem(7);
+    }
+  }
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: rem(9);
+    @media (max-width: $tablet) {
+      gap: rem(13);
+    }
+  }
+}

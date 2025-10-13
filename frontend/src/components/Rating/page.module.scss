@@ -1,0 +1,17 @@
+.rating {
+  display: flex;
+  gap: rem(13);
+  align-items: center;
+  margin-bottom: rem(5);
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: rem(1);
+  }
+  &__item {
+    display: flex;
+  }
+  &__count {
+    color: var(--text-secondary);
+  }
+}

@@ -1,0 +1,74 @@
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: rem(17);
+  height: rem(48);
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: rem(71);
+  padding: rem(12) rem(20);
+  margin-right: rem(13);
+  @media (max-width: $tablet) {
+    display: none;
+  }
+  &__input {
+    position: relative;
+    width: 100%;
+    top: rem(1);
+    border: 0;
+    outline: 0;
+    font-size: rem(14);
+    line-height: 1.78;
+    &::placeholder {
+      color: var(--text-secondary);
+    }
+  }
+  &__filter {
+    @include reset-btn;
+    --size: #{rem(18)};
+    width: var(--size);
+    height: var(--size);
+    display: none;
+    flex-shrink: 0;
+    @media (max-width: $tablet) {
+      display: block;
+    }
+    i,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__triangle {
+    position: absolute;
+    top: rem(-30);
+    right: rem(10);
+    z-index: 4;
+    border: rem(20) solid transparent;
+    border-bottom-color: var(--white);
+  }
+  &__filters-wrapper {
+    overflow: hidden;
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: rem(23);
+  }
+  &__filters {
+    position: absolute;
+    z-index: 5;
+    top: rem(55);
+    left: 0;
+    background: var(--white);
+    width: 100%;
+    box-shadow: 0 rem(4) rem(58) 0 rgba(204, 204, 204, 0.12),
+      0 rem(4) rem(26) 0 rgba(199, 199, 199, 0.5);
+    border-radius: rem(8);
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+}

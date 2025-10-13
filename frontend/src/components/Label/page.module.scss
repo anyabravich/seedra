@@ -1,0 +1,15 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  padding: rem(8) rem(19);
+  height: rem(40);
+  gap: rem(8);
+  text-transform: uppercase;
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: rem(119);
+  &._available {
+    color: var(--green-brand);
+    border-color: transparent;
+    background: rgba(53, 151, 64, 0.08);
+  }
+}

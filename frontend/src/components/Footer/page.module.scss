@@ -1,0 +1,100 @@
+.footer {
+  background: var(--white);
+  box-shadow: 0 rem(-7) rem(80) 0 rgba(189, 189, 189, 0.25);
+  min-height: rem(172);
+  padding-top: rem(41);
+  padding-bottom: rem(28);
+  margin-top: auto;
+  flex-shrink: 0;
+  @media (max-width: $tablet) {
+    padding-top: rem(36);
+    padding-bottom: rem(20);
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: rem(75);
+    padding-bottom: rem(33);
+    border-bottom: 1px solid rgba(#359740, 0.3);
+    @media (max-width: $tablet) {
+      display: grid;
+      align-items: initial;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(32);
+      padding-bottom: rem(23);
+    }
+  }
+  &__menu {
+    display: flex;
+    gap: rem(32);
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      gap: rem(24);
+    }
+  }
+  &__item {
+    position: relative;
+    padding-right: rem(32);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 1px;
+      height: rem(25);
+      background: var(--primary-color);
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+    &:last-child {
+      padding-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    width: rem(125);
+    height: rem(27);
+    @media (max-width: $tablet) {
+      order: -1;
+      grid-column: 1 / -1;
+      margin: 0 auto;
+      margin-bottom: rem(4);
+    }
+  }
+  &__link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: rem(19);
+    @media (max-width: $tablet) {
+      padding-top: rem(24);
+    }
+  }
+  &__socials {
+    display: flex;
+    gap: rem(24);
+  }
+  &__socials-link {
+    --size: rem(24);
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+  }
+  &__copyright {
+    color: var(--text-secondary);
+  }
+}

@@ -1,0 +1,50 @@
+.range-slider {
+  &__fields {
+    display: grid;
+    align-items: center;
+    grid-template-columns: rem(95) 1fr rem(95);
+    margin-bottom: rem(25);
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+  &__line {
+    --size: #{rem(24)};
+    width: var(--size);
+    height: var(--size);
+    margin-inline: auto;
+    margin-block: auto rem(11);
+  }
+  &__input-wrapper {
+    position: relative;
+    &::before {
+      content: "$";
+      position: absolute;
+      top: rem(13);
+      left: rem(13);
+      font: var(--light-16);
+    }
+  }
+  &__input {
+    width: 100%;
+    height: rem(46);
+    border-radius: rem(7);
+    border: 1px solid var(--light-grey-stroke);
+    padding: rem(10) rem(13);
+    padding-left: rem(22);
+    font: var(--light-16);
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  &__slider {
+    .rc-slider-handle {
+      display: none;
+    }
+  }
+}

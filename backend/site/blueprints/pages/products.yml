@@ -1,0 +1,7 @@
+Title: Products
+
+sections:
+  pages:
+    label: Products cards
+    type: pages
+    template: product

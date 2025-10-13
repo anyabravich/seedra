@@ -1,0 +1,81 @@
+.card {
+  position: relative;
+  padding: rem(26);
+  padding-bottom: rem(22);
+  border-radius: rem(8);
+  border: rem(2) solid var(--light-grey-stroke);
+  background: var(--white);
+  @media (max-width: $tablet) {
+    padding: rem(30) rem(14) rem(24);
+  }
+  &__picture {
+    display: block;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    margin-bottom: rem(24);
+    @media (max-width: $tablet) {
+      margin-bottom: rem(28);
+    }
+  }
+  &__content {
+    @media (max-width: $tablet) {
+      padding: 0 rem(11);
+    }
+  }
+  &__title {
+    font-size: rem(16);
+    font-weight: 500;
+    line-height: 1.56;
+    letter-spacing: -0.04em;
+    max-width: rem(291);
+    margin-bottom: rem(8);
+    color: var(--text-primary);
+    text-decoration: none;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__price {
+    font-size: rem(28);
+    font-weight: 600;
+    line-height: 1.92;
+  }
+  &__button {
+    @include reset-btn();
+    padding: rem(12);
+    border-radius: rem(8);
+    height: rem(48);
+    border: rem(1) solid var(--light-grey-stroke);
+    z-index: 2;
+    &.add {
+      background: var(--green-brand);
+      border-color: transparent;
+    }
+  }
+  &__favorite {
+    @include reset-btn();
+    position: absolute;
+    top: rem(12);
+    right: rem(12);
+    z-index: 2;
+    border-radius: 50%;
+    width: rem(40);
+    height: rem(40);
+    border: rem(1) solid var(--light-grey-stroke);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

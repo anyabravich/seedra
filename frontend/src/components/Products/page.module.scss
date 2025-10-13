@@ -1,0 +1,16 @@
+.products {
+  overflow: hidden;
+  margin-bottom: rem(90);
+  @media (max-width: $tablet) {
+    margin-bottom: rem(40);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(38);
+    @media (max-width: $tablet) {
+      margin-bottom: rem(21);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.navigation {
+  margin-right: rem(43);
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.menu {
+  display: flex;
+}
+
+.item {
+  padding: 0 rem(16);
+  border-left: 1px solid var(--light-grey-stroke);
+  &:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: rem(14);
+  line-height: 1.78;
+  transition: color 0.3s ease;
+  &.active {
+    color: var(--green-brand);
+    font-weight: 600;
+  }
+}
+

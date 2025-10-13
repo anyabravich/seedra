@@ -1,0 +1,18 @@
+.rc-slider {
+  .rc-slider-rail {
+    height: rem(5);
+    background: var(--light-grey-stroke);
+  }
+  .rc-slider-track {
+    background: var(--green-brand);
+  }
+  .rc-slider-handle {
+    --size: #{rem(14)};
+    width: var(--size);
+    height: var(--size);
+    background: var(--white);
+    opacity: 1;
+    border-color: var(--green-brand-hover) !important;
+    box-shadow: none !important;
+  }
+}
