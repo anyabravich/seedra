@@ -10,6 +10,7 @@ import Icons from "../Icons";
 const RangeSlider = () => {
   const [from, setFrom] = useState(0);
   const [to, setTo] = useState(100);
+  
   return (
     <div className={styles.root}>
       <div className={styles.fields}>
@@ -55,12 +56,9 @@ const RangeSlider = () => {
         min={0}
         max={100}
         onChange={(value) => {
-          if (Array.isArray(value)) {
-            setFrom(value[0]);
-            setTo(value[1]);
-          } else {
-            setFrom(value);
-          }
+          const [fromValue, toValue] = value as number[];
+          setFrom(fromValue);
+          setTo(toValue);
         }}
       />
     </div>

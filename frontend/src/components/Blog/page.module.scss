@@ -5,10 +5,6 @@
   }
 }
 
-.container {
-  // container uses global Container component sizing
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -19,20 +15,4 @@
   }
 }
 
-.title {
-  // inherits h2 styles
-}
 
-.button {
-  // inherits Button styles
-}
-
-.cards {
-  // wrapper for slider
-}
-
-.grid {
-  display: grid;
-  gap: rem(30);
-  grid-template-columns: repeat(3, 1fr);
-}

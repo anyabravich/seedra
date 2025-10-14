@@ -29,14 +29,9 @@ const BlogCard = ({
           className={`${styles.title} h3`}
           dangerouslySetInnerHTML={{ __html: title }}
         ></h3>
-        {!isSquare ? (
+        {description && (
           <p
-            className={`${styles.description} regular-14`}
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></p>
-        ) : (
-          <p
-            className={`${styles.description} ${styles.square} regular-14`}
+            className={`${styles.description} ${isSquare ? styles.square : ''} regular-14`}
             dangerouslySetInnerHTML={{ __html: description }}
           ></p>
         )}

@@ -14,10 +14,12 @@ export default function Products() {
   return (
     <Container>
       <ProductsNavigation />
+
       <Categories
         activeIndex={activeIndex}
         onChangeCategory={handleChangeCategory}
       />
+      
       <ProductsGrid products={{ cards: filteredProducts }} />
     </Container>
   );

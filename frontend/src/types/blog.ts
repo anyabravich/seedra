@@ -1,8 +1,8 @@
-export interface IBlogCard {
+export interface BlogDataItem {
+  className?: string[];
   time: string;
   image: string;
   title: string;
   description?: string;
-  className?: string[];
   isSquare?: boolean;
 }
