@@ -1,8 +1,11 @@
 export interface BlogDataItem {
-  className?: string[];
   time: string;
   image: string;
   title: string;
   description?: string;
+  isHorizontal?: boolean;
+  isVertical?: boolean;
   isSquare?: boolean;
+  isGreen?: boolean;
+  isWhite?: boolean;
 }

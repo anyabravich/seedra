@@ -6,19 +6,25 @@ import Link from "next/link";
 import { IBlogCard } from "./types";
 
 const BlogCard = ({
-  className,
   time,
   image,
   title,
   description,
+  isHorizontal,
+  isVertical,
   isSquare,
+  isGreen,
+  isWhite,
 }: IBlogCard) => {
   return (
     <article
-      className={classNames(
-        styles.blogCard,
-        className && className.map((cls) => styles[cls])
-      )}
+      className={classNames(styles.blogCard, {
+        [styles._horizontal]: isHorizontal,
+        [styles._vertical]: isVertical,
+        [styles._square]: isSquare,
+        [styles._green]: isGreen,
+        [styles._white]: isWhite,
+      })}
     >
       <div className={styles.content}>
         <time className={`${styles.time} regular-14`}>
@@ -31,7 +37,9 @@ const BlogCard = ({
         ></h3>
         {description && (
           <p
-            className={`${styles.description} ${isSquare ? styles.square : ''} regular-14`}
+            className={`${styles.description} ${
+              isSquare ? styles.square : ""
+            } regular-14`}
             dangerouslySetInnerHTML={{ __html: description }}
           ></p>
         )}

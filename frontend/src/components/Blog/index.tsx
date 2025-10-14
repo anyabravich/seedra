@@ -14,7 +14,7 @@ const Blog = () => {
             Go to our blog
           </Button>
         </header>
-        <BlogList data={data} className={`${styles.cards} slider`} />
+        <BlogList data={data} className={`${styles.cards} slider`} limit={6} />
       </Container>
     </section>
   );

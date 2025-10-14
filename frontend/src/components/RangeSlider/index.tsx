@@ -10,22 +10,18 @@ import Icons from "../Icons";
 const RangeSlider = () => {
   const [from, setFrom] = useState(0);
   const [to, setTo] = useState(100);
-  
+
   return (
     <div className={styles.root}>
       <div className={styles.fields}>
         <div className={styles.field}>
-          <label
-            className={`regular-14 text-secondary`}
-          >
-            From
-          </label>
+          <label className={`regular-14 text-secondary`}>From</label>
           <div className={styles.inputWrapper}>
             <input
               className={styles.input}
               type="number"
               value={from}
-              onChange={(e) => setFrom(parseInt(e.target.value))}
+              onChange={e => setFrom(parseInt(e.target.value))}
             />
           </div>
         </div>
@@ -33,17 +29,13 @@ const RangeSlider = () => {
           <Icons iconName="range-line" />
         </div>
         <div className={styles.field}>
-          <label
-            className={`regular-14 text-secondary`}
-          >
-            To
-          </label>
+          <label className={`regular-14 text-secondary`}>To</label>
           <div className={styles.inputWrapper}>
             <input
               className={styles.input}
               type="number"
               value={to}
-              onChange={(e) => setTo(parseInt(e.target.value))}
+              onChange={e => setTo(parseInt(e.target.value))}
             />
           </div>
         </div>
@@ -55,7 +47,7 @@ const RangeSlider = () => {
         value={[from, to]}
         min={0}
         max={100}
-        onChange={(value) => {
+        onChange={value => {
           const [fromValue, toValue] = value as number[];
           setFrom(fromValue);
           setTo(toValue);

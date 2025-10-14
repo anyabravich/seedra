@@ -1,8 +1,10 @@
 import Container from "@/components/Container";
 import BlogPage from "@/page/blog";
 
-const Page = () => <Container>
+const Page = () => (
+  <Container>
     <BlogPage />
-</Container>;
+  </Container>
+);
 
 export default Page;

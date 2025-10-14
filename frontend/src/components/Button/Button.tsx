@@ -2,8 +2,9 @@ import styles from "./page.module.scss";
 import { ButtonProps } from "./types";
 import { VARIANT_CLASSES, SIZE_CLASSES } from "./constants";
 import { buildButtonClasses, isButtonDisabled } from "./utils";
+import { FC } from "react";
 
-const Button: React.FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   children,
   variant = "primary",
   size = "medium",

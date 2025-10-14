@@ -10,9 +10,16 @@ import styles from "./page.module.scss";
 interface BlogListProps {
   data: BlogDataItem[];
   className?: string;
+  limit?: number;
+  disableSlider?: boolean;
 }
 
-const BlogList = ({ data, className }: BlogListProps) => {
+const BlogList = ({
+  data,
+  className,
+  limit,
+  disableSlider = false,
+}: BlogListProps) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -24,23 +31,70 @@ const BlogList = ({ data, className }: BlogListProps) => {
     return null;
   }
 
+  const displayData = limit ? data.slice(0, limit) : data;
+
+  const renderBlogCards = () => {
+    return displayData.map(
+      (
+        {
+          time,
+          image,
+          title,
+          description,
+          isHorizontal,
+          isVertical,
+          isSquare,
+          isGreen,
+          isWhite,
+        },
+        index
+      ) => (
+        <BlogCard
+          key={index}
+          time={time}
+          image={image}
+          title={title}
+          isHorizontal={isHorizontal}
+          isVertical={isVertical}
+          isSquare={isSquare}
+          isGreen={isGreen}
+          isWhite={isWhite}
+          description={description}
+        />
+      )
+    );
+  };
+
   return (
     <div className={className}>
-      {isMobile ? (
+      {isMobile && !disableSlider ? (
         <Swiper slidesPerView={1.08} spaceBetween={11}>
-          {data.map(
+          {displayData.map(
             (
-              { className, time, image, title, description, isSquare },
+              {
+                time,
+                image,
+                title,
+                description,
+                isHorizontal,
+                isVertical,
+                isSquare,
+                isGreen,
+                isWhite,
+              },
               index
             ) => (
               <SwiperSlide key={index}>
                 <BlogCard
                   key={index}
-                  className={className}
                   time={time}
                   image={image}
                   title={title}
+                  isHorizontal={isHorizontal}
+                  isVertical={isVertical}
                   isSquare={isSquare}
+                  isGreen={isGreen}
+                  isWhite={isWhite}
                   description={description}
                 />
               </SwiperSlide>
@@ -48,23 +102,8 @@ const BlogList = ({ data, className }: BlogListProps) => {
           )}
         </Swiper>
       ) : (
-        <div className={styles.grid}>
-          {data.map(
-            (
-              { className, time, image, title, description, isSquare },
-              index
-            ) => (
-              <BlogCard
-                key={index}
-                className={className}
-                time={time}
-                image={image}
-                title={title}
-                isSquare={isSquare}
-                description={description}
-              />
-            )
-          )}
+        <div className={isMobile ? styles.mobileVertical : styles.grid}>
+          {renderBlogCards()}
         </div>
       )}
     </div>

@@ -3,6 +3,7 @@ import { Lexend } from "next/font/google";
 import "@/styles/styles.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ReactNode } from "react";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">

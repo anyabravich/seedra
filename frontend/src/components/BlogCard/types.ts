@@ -3,6 +3,9 @@ export interface IBlogCard {
   image: string;
   title: string;
   description?: string;
-  className?: string[];
+  isHorizontal?: boolean;
+  isVertical?: boolean;
   isSquare?: boolean;
+  isGreen?: boolean;
+  isWhite?: boolean;
 }
