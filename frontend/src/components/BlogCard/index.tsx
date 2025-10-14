@@ -31,18 +31,20 @@ const BlogCard = ({
           <Image src="/clock.svg" alt="calendar" width={24} height={24} />
           {time}
         </time>
-        <h3
-          className={`${styles.title} h3`}
-          dangerouslySetInnerHTML={{ __html: title }}
-        ></h3>
-        {description && (
-          <p
-            className={`${styles.description} ${
-              isSquare ? styles.square : ""
-            } regular-14`}
-            dangerouslySetInnerHTML={{ __html: description }}
-          ></p>
-        )}
+        <div className={styles.titleBlock}>
+          <h3
+            className={`${styles.title} h3`}
+            dangerouslySetInnerHTML={{ __html: title }}
+          ></h3>
+          {description && (
+            <p
+              className={`${styles.description} ${
+                isSquare ? styles.square : ""
+              } regular-14`}
+              dangerouslySetInnerHTML={{ __html: description }}
+            ></p>
+          )}
+        </div>
         <Link className={styles.link} href="/blog/1">
           <Button variant="secondary">Read</Button>
         </Link>

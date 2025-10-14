@@ -1,8 +1,8 @@
 .productsNavigation {
   display: flex;
   align-items: center;
-  gap: rem(26);
-  margin-bottom: rem(25);
+  gap: rem(20);
+  margin-bottom: rem(33);
   height: rem(63);
   @media (max-width: $tablet) {
     height: rem(53);

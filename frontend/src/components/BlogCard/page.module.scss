@@ -49,13 +49,14 @@
   margin-bottom: rem(9);
 }
 
-.title {
-  margin-bottom: rem(4);
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
 }
 
 .description {
   color: var(--text-secondary);
-  margin-bottom: rem(14);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -84,5 +85,7 @@
 }
 
 .link {
+  display: inline-block;
   text-decoration: none;
+  margin-top: rem(14);
 }

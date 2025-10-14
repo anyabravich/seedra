@@ -30,10 +30,10 @@ const ProductsNavigation = () => {
           <Select
             className={styles.select}
             value={selectedOption}
-            onChange={(newValue) => setSelectedOption(newValue)}
+            onChange={newValue => setSelectedOption(newValue)}
             options={options}
             isSearchable={false}
-            formatOptionLabel={(option) => (
+            formatOptionLabel={option => (
               <div>
                 <span>{option.label}</span>
               </div>
@@ -47,12 +47,12 @@ const ProductsNavigation = () => {
               ),
             }}
             styles={{
-              container: (base) => ({
+              container: base => ({
                 ...base,
                 height: "100%",
-                width: "16rem",
+                width: "16.6rem",
               }),
-              control: (base) => ({
+              control: base => ({
                 ...base,
                 height: "100%",
                 borderRadius: "4.4375rem",
@@ -67,7 +67,7 @@ const ProductsNavigation = () => {
                   borderColor: "var(--light-grey-stroke)",
                 },
               }),
-              valueContainer: (base) => ({
+              valueContainer: base => ({
                 ...base,
                 padding: "0",
                 margin: "0",
@@ -75,12 +75,12 @@ const ProductsNavigation = () => {
                 display: "flex",
                 alignItems: "center",
               }),
-              input: (base) => ({
+              input: base => ({
                 ...base,
                 margin: "0",
                 padding: "0",
               }),
-              singleValue: (base) => ({
+              singleValue: base => ({
                 ...base,
                 margin: "0",
                 padding: "0",
@@ -88,7 +88,7 @@ const ProductsNavigation = () => {
                 display: "flex",
                 alignItems: "center",
               }),
-              indicatorSeparator: (base) => ({
+              indicatorSeparator: base => ({
                 ...base,
                 display: "none",
               }),
