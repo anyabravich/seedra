@@ -6,28 +6,28 @@ import Container from "../Container";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <Container className={`${styles.footer__container} container`}>
-        <div className={styles.footer__inner}>
-          <ul className={styles.footer__menu}>
-            <li className={styles.footer__item}>
+      <Container className={`${styles.container} container`}>
+        <div className={styles.inner}>
+          <ul className={styles.menu}>
+            <li className={styles.item}>
               <Link
-                className={`${styles.footer__link} regular-14`}
+                className={`${styles.link} regular-14`}
                 href="/products"
               >
                 ALL PRODUCTS
               </Link>
             </li>
-            <li className={styles.footer__item}>
+            <li className={styles.item}>
               <Link
-                className={`${styles.footer__link} regular-14`}
+                className={`${styles.link} regular-14`}
                 href="/about"
               >
                 ABOUT SEEDRA
               </Link>
             </li>
-            <li className={styles.footer__item}>
+            <li className={styles.item}>
               <Link
-                className={`${styles.footer__link} regular-14`}
+                className={`${styles.link} regular-14`}
                 href="/blog"
               >
                 OUR BLOG
@@ -36,36 +36,36 @@ const Footer = () => {
           </ul>
           {/* TODO: 🎯 добавить ссылку */}
           <Image
-            className={styles.footer__logo}
+            className={styles.logo}
             src="/logo.svg"
             alt="logo"
             width={125}
             height={27}
           />
-          <ul className={styles.footer__menu}>
-            <li className={styles.footer__item}>
-              <Link className={`${styles.footer__link} regular-14`} href="/">
+          <ul className={styles.menu}>
+            <li className={styles.item}>
+              <Link className={`${styles.link} regular-14`} href="/">
                 Terms&Conditions
               </Link>
             </li>
-            <li className={styles.footer__item}>
-              <Link className={`${styles.footer__link} regular-14`} href="/">
+            <li className={styles.item}>
+              <Link className={`${styles.link} regular-14`} href="/">
                 Privacy Policy
               </Link>
             </li>
           </ul>
         </div>
-        <div className={styles.footer__bottom}>
-          <ul className={styles.footer__socials}>
-            <li className={styles["footer__socials-item"]}>
+        <div className={styles.bottom}>
+          <ul className={styles.socials}>
+            <li className={styles.socialsItem}>
               <Link
-                className={`${styles["footer__socials-link"]}`}
+                className={`${styles.socialsLink}`}
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noreferrer"
               >
                 <Image
-                  className={styles["footer__socials-img"]}
+                  className={styles.socialsImg}
                   src="/instagram.svg"
                   alt="instagram"
                   width={24}
@@ -73,15 +73,15 @@ const Footer = () => {
                 />
               </Link>
             </li>
-            <li className={styles["footer__socials-item"]}>
+            <li className={styles.socialsItem}>
               <Link
-                className={`${styles["footer__socials-link"]}`}
+                className={`${styles.socialsLink}`}
                 href="https://www.facebook.com"
                 target="_blank"
                 rel="noreferrer"
               >
                 <Image
-                  className={styles["footer__socials-img"]}
+                  className={styles.socialsImg}
                   src="/facebook.svg"
                   alt="facebook"
                   width={24}
@@ -90,7 +90,7 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-          <p className={`${styles.footer__copyright} regular-14`}>
+          <p className={`${styles.copyright} regular-14`}>
             All rights reserved
           </p>
         </div>

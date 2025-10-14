@@ -1,5 +1,4 @@
 .button {
-  @include reset-btn();
   @extend .animated;
   display: flex;
   align-items: center;

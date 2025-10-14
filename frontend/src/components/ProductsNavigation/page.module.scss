@@ -1,4 +1,4 @@
-.products-navigation {
+.productsNavigation {
   display: flex;
   align-items: center;
   gap: rem(26);
@@ -8,27 +8,30 @@
     height: rem(53);
     margin-bottom: rem(16);
   }
-  &__search {
-    height: 100%;
-    margin-right: 0;
-    @media (max-width: $tablet) {
-      display: flex;
-    }
-  }
-  &__select {
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
-  &__single-value {
+}
+
+.search {
+  height: 100%;
+  margin-right: 0;
+  @media (max-width: $tablet) {
     display: flex;
-    flex-direction: column;
-    gap: rem(1);
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
   }
+}
+
+.select {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.singleValue {
+  display: flex;
+  flex-direction: column;
+  gap: rem(1);
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }

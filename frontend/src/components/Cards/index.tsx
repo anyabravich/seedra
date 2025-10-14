@@ -33,8 +33,8 @@ const Cards = ({ cards }: { cards: IProduct[] }) => {
         </Swiper>
       ) : (
         <div
-          className={`${styles["cards__container"]} ${
-            cards.length === 0 && styles["empty"]
+          className={`${styles.container} ${
+            cards.length === 0 && styles.empty
           }`}
         >
           {cards.length > 0 ? (
@@ -44,7 +44,7 @@ const Cards = ({ cards }: { cards: IProduct[] }) => {
               </div>
             ))
           ) : (
-            <p className={styles.cards__empty}>В этой категории нет товаров</p>
+            <p className={styles.emptyText}>В этой категории нет товаров</p>
           )}
         </div>
       )}

@@ -13,21 +13,21 @@ const Search = ({ className }: ISearch) => {
     <form className={`${styles["search"]} ${className}`}>
       <Icons iconName="search" />
       <input
-        className={styles["search__input"]}
+        className={styles.input}
         type="text"
         placeholder="Search"
       />
       <button
-        className={styles["search__filter"]}
+        className={styles.filter}
         type="button"
         onClick={() => setIsOpenFilters(!isOpenFilters)}
       >
         <Icons iconName="filter" />
       </button>
       {isOpenFilters && (
-        <div className={styles["search__filters"]}>
-          <i className={styles["search__triangle"]}></i>
-          <div className={styles["search__filters-wrapper"]}>
+        <div className={styles.filters}>
+          <i className={styles.triangle}></i>
+          <div className={styles.filtersWrapper}>
             <Filters />
           </div>
         </div>

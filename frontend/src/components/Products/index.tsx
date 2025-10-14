@@ -27,13 +27,14 @@ const Products = () => {
 
   return (
     <section className={styles.products}>
-      <Container className={styles.products__container}>
-        <header className={styles.products__header}>
-          <h2 className={`${styles.products__title} h2`}>Our products</h2>
-          <Button className={`${styles.products__button}`} variant="border">
+      <Container className={styles.container}>
+        <header className={styles.header}>
+          <h2 className={`${styles.title} h2`}>Our products</h2>
+          <Button className={`${styles.button}`} variant="border">
             View all ({PRODUCTS.length})
           </Button>
         </header>
+        
         <Categories
           activeIndex={activeIndex}
           onChangeCategory={handleChangeCategory}

@@ -1,26 +1,23 @@
 "use client";
-import React, { useState } from "react";
+
+import { useState } from "react";
 import styles from "./page.module.scss";
 import { motion } from "framer-motion";
 import Icons from "../Icons";
-
-interface IAccordion {
-  title: string;
-  children: React.ReactNode;
-}
+import { IAccordion } from "./types";
 
 const Accordion = ({ title, children }: IAccordion) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={styles["accordion"]}>
+    <div className={styles.accordion}>
       <header
-        className={styles["accordion__header"]}
+        className={styles.header}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <p className={`${styles["accordion__title"]} medium-16`}>{title}</p>
+        <p className={`${styles.title} medium-16`}>{title}</p>
         <motion.div
-          className={styles["accordion__arrow"]}
+          className={styles.arrow}
           initial={{ rotate: 0 }}
           whileInView={{
             rotate: isOpen ? 180 : 0,
@@ -33,7 +30,7 @@ const Accordion = ({ title, children }: IAccordion) => {
       </header>
       {isOpen && (
         <motion.div
-          className={styles["accordion__content"]}
+          className={styles.content}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
         >

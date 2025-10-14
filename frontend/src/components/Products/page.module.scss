@@ -4,13 +4,26 @@
   @media (max-width: $tablet) {
     margin-bottom: rem(40);
   }
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: rem(38);
-    @media (max-width: $tablet) {
-      margin-bottom: rem(21);
-    }
+}
+
+.container {
+  // Container styles will be inherited from Container component
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(38);
+  @media (max-width: $tablet) {
+    margin-bottom: rem(21);
   }
+}
+
+.title {
+  // Title styles will be inherited from h2 class
+}
+
+.button {
+  // Button styles will be inherited from Button component
 }

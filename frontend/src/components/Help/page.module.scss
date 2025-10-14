@@ -4,57 +4,65 @@
   @media (max-width: $tablet) {
     padding-block: rem(40) rem(100);
   }
-  &__container {
-    display: grid;
-    align-items: center;
-    gap: rem(160);
-    grid-template-columns: repeat(2, 1fr);
-    @media (max-width: $tablet) {
-      display: flex;
-      flex-direction: column;
-      gap: rem(60);
-    }
-  }
-  &__title {
-    margin-bottom: rem(30);
-    @media (max-width: $tablet) {
-      max-width: 70%;
-      margin-bottom: rem(25);
-    }
-  }
-  &__text {
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  gap: rem(160);
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: $tablet) {
     display: flex;
     flex-direction: column;
-    gap: rem(28);
+    gap: rem(60);
+  }
+}
+
+.title {
+  margin-bottom: rem(30);
+  @media (max-width: $tablet) {
+    max-width: 70%;
+    margin-bottom: rem(25);
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: rem(28);
+  @media (max-width: $tablet) {
+    gap: rem(20);
+  }
+}
+
+.imageDecor {
+  --size: #{rem(466)};
+  position: relative;
+  aspect-ratio: 466 / 466;
+  width: 100%;
+  @media (max-width: $tablet) {
+    aspect-ratio: 284 / 284;
+    width: calc(284 / 352 * 100%);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: rem(-55);
+    left: rem(-49);
+    width: rem(734);
+    height: rem(579);
+    background: url("/help-decor.png") no-repeat 0 0 / contain;
+    z-index: -1;
     @media (max-width: $tablet) {
-      gap: rem(20);
+      top: calc(-50 / 352 * 100%);
+      left: calc(-40 / 352 * 100%);
+      width: calc(410 / 270 * 100%);
+      height: calc(350 / 270 * 100%);
+      background: url("/help-decor-mobile.png") no-repeat 0 0 / contain;
     }
   }
-  &__image-decor {
-    --size: #{rem(466)};
-    position: relative;
-    aspect-ratio: 466 / 466;
-    width: 100%;
-    @media (max-width: $tablet) {
-      aspect-ratio: 284 / 284;
-      width: calc(284 / 352 * 100%);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: rem(-55);
-      left: rem(-49);
-      width: rem(734);
-      height: rem(579);
-      background: url("/help-decor.png") no-repeat 0 0 / contain;
-      z-index: -1;
-      @media (max-width: $tablet) {
-        top: calc(-50 / 352 * 100%);
-        left: calc(-40 / 352 * 100%);
-        width: calc(410 / 270 * 100%);
-        height: calc(350 / 270 * 100%);
-        background: url("/help-decor-mobile.png") no-repeat 0 0 / contain;
-      }
-    }
-  }
+}
+
+.image {
+  // Image styles will be inherited from Next.js Image component
 }

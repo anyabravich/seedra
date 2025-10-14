@@ -1,30 +1,35 @@
-.card-checkout {
+.cardCheckout {
   display: flex;
   align-items: center;
-  &__img-wrapper {
-    --size: #{rem(64)};
-    width: var(--size);
-    height: var(--size);
-    position: relative;
-    border-radius: rem(12);
-    border: 1px solid var(--light-grey-stroke);
-    overflow: hidden;
-    margin-right: rem(16);
-  }
-  &__title {
-    max-width: rem(268);
-  }
-  &__quantity {
-    margin-left: auto;
-    margin-right: rem(29);
-  }
-  &__price {
-    margin-right: rem(50);
-    width: rem(52);
-    text-align: right;
-  }
-  &__total {
-    width: rem(52);
-    text-align: right;
-  }
+}
+
+.imgWrapper {
+  --size: #{rem(64)};
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  border-radius: rem(12);
+  border: 1px solid var(--light-grey-stroke);
+  overflow: hidden;
+  margin-right: rem(16);
+}
+
+.title {
+  max-width: rem(268);
+}
+
+.quantity {
+  margin-left: auto;
+  margin-right: rem(29);
+}
+
+.price {
+  margin-right: rem(50);
+  width: rem(52);
+  text-align: right;
+}
+
+.total {
+  width: rem(52);
+  text-align: right;
 }

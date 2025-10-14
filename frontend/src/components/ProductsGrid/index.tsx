@@ -2,11 +2,7 @@ import Filters from "../Filters";
 import ProductsCards from "../ProductsCards";
 
 import styles from "./page.module.scss";
-import { IProduct } from "../Products/types";
-
-interface IProductsGrid {
-  products: { cards: IProduct[] };
-}
+import { IProductsGrid } from "./types";
 
 const ProductsGrid = (products: IProductsGrid) => {
   return (

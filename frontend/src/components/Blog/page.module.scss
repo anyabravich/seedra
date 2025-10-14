@@ -3,18 +3,36 @@
   @media (max-width: $tablet) {
     margin-bottom: rem(54);
   }
-  &__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: rem(42);
-    @media (max-width: $tablet) {
-      margin-bottom: rem(26);
-    }
+}
+
+.container {
+  // container uses global Container component sizing
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: rem(42);
+  @media (max-width: $tablet) {
+    margin-bottom: rem(26);
   }
-  &__grid {
-    display: grid;
-    gap: rem(30);
-    grid-template-columns: repeat(3, 1fr);
-  }
+}
+
+.title {
+  // inherits h2 styles
+}
+
+.button {
+  // inherits Button styles
+}
+
+.cards {
+  // wrapper for slider
+}
+
+.grid {
+  display: grid;
+  gap: rem(30);
+  grid-template-columns: repeat(3, 1fr);
 }

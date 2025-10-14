@@ -47,7 +47,7 @@ const Card = ({ id, title, price, url }: IProduct) => {
   return (
     <article className={styles.card}>
       <button
-        className={styles.card__favorite}
+        className={styles.favorite}
         type="button"
         onClick={() => handleToggle("favorite")}
       >
@@ -57,24 +57,24 @@ const Card = ({ id, title, price, url }: IProduct) => {
           <Favorite variant="yellow" />
         )}
       </button>
-      <picture className={styles.card__picture}>
+      <picture className={styles.picture}>
         <Image
-          className={styles.card__image}
+          className={styles.image}
           src="/card-1.jpg"
           alt="card"
           priority={true}
           fill
         />
       </picture>
-      <div className={styles.card__content}>
+      <div className={styles.content}>
         <Rating rating={4.5} ratingCount={123} />
-        <Link className={styles.card__title} href={url || "/products"}>
+        <Link className={styles.title} href={url || "/products"}>
           {title}
         </Link>
-        <footer className={styles.card__footer}>
-          <p className={styles.card__price}>${price}</p>
+        <footer className={styles.footer}>
+          <p className={styles.price}>${price}</p>
           <button
-            className={`${styles.card__button} ${
+            className={`${styles.button} ${
               state.goods ? styles.add : ""
             }`}
             type="button"

@@ -1,6 +1,5 @@
 .input {
   --size: #{rem(20)};
-  $this: &;
   position: relative;
   display: inline-flex;
   gap: rem(9);
@@ -11,10 +10,10 @@
     cursor: pointer;
   }
   &._radio {
-    #{$this}__box {
+    .box {
       border-radius: 50%;
     }
-    #{$this}__input:checked + #{$this}__box {
+    .inputField:checked + .box {
       background: none;
       position: relative;
       &::before {
@@ -36,46 +35,50 @@
     height: rem(44);
     border-radius: rem(8);
     border: 1px solid var(--light-grey-stroke);
-    &:has(#{$this}__input:checked) {
+    &:has(.inputField:checked) {
       border-color: var(--green-brand);
     }
   }
-  &__input {
-    width: var(--size);
-    height: var(--size);
-    position: absolute;
-    border: 0;
-    outline: 0;
-    opacity: 0;
+}
 
-    &:hover + #{$this}__box {
-      border-color: var(--green-brand);
-      transition: border-color 0.3s ease-out;
-    }
-    &:checked + #{$this}__box {
-      border-color: var(--green-brand);
-      background: url("/checkbox.svg") center center no-repeat;
-      background-size: rem(13) rem(9);
-    }
-  }
-  &__box {
-    display: block;
-    border-radius: rem(6);
-    width: var(--size);
-    height: var(--size);
-    border: 1px solid var(--light-grey-stroke);
+.inputField {
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  border: 0;
+  outline: 0;
+  opacity: 0;
+
+  &:hover + .box {
+    border-color: var(--green-brand);
     transition: border-color 0.3s ease-out;
-    flex-shrink: 0;
   }
-  &__label {
-    @media (max-width: $tablet) {
-      max-width: rem(171);
-    }
+  &:checked + .box {
+    border-color: var(--green-brand);
+    background: url("/checkbox.svg") center center no-repeat;
+    background-size: rem(13) rem(9);
   }
-  &__price {
-    margin-left: auto;
-    display: flex;
-    gap: rem(8);
-    align-items: center;
+}
+
+.box {
+  display: block;
+  border-radius: rem(6);
+  width: var(--size);
+  height: var(--size);
+  border: 1px solid var(--light-grey-stroke);
+  transition: border-color 0.3s ease-out;
+  flex-shrink: 0;
+}
+
+.label {
+  @media (max-width: $tablet) {
+    max-width: rem(171);
   }
+}
+
+.price {
+  margin-left: auto;
+  display: flex;
+  gap: rem(8);
+  align-items: center;
 }

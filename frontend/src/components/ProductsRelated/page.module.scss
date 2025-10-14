@@ -1,11 +1,13 @@
-.products-related {
+.productsRelated {
   margin-bottom: rem(32);
-  &__title {
-    margin-bottom: rem(40);
-  }
-  &__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: rem(30);
-  }
+}
+
+.title {
+  margin-bottom: rem(40);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: rem(30);
 }

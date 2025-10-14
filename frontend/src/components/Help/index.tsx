@@ -5,12 +5,12 @@ import styles from "./page.module.scss";
 const Help = () => {
   return (
     <section className={styles.help}>
-      <Container className={styles.help__container}>
+      <Container className={styles.container}>
         <div>
-          <h2 className={`${styles.help__title} h2`}>
+          <h2 className={`${styles.title} h2`}>
             Seedra helps to grow fast and efficiant
           </h2>
-          <div className={`${styles.help__text} light-16`}>
+          <div className={`${styles.text} light-16`}>
             <p>
               SEEDRA Spinach Seeds - contains 600 seeds in 2 Packs and
               professional instructions created by PhD Helga George
@@ -32,9 +32,9 @@ const Help = () => {
             </p>
           </div>
         </div>
-        <div className={styles["help__image-decor"]}>
+        <div className={styles.imageDecor}>
           <Image
-            className={styles["help__image"]}
+            className={styles.image}
             src="/help-img.png"
             alt="decor"
             fill

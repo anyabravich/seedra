@@ -1,22 +1,22 @@
-.range-slider {
-  &__fields {
+.root {
+  .fields {
     display: grid;
     align-items: center;
     grid-template-columns: rem(95) 1fr rem(95);
     margin-bottom: rem(25);
   }
-  &__field {
+  .field {
     display: flex;
     flex-direction: column;
   }
-  &__line {
+  .line {
     --size: #{rem(24)};
     width: var(--size);
     height: var(--size);
     margin-inline: auto;
     margin-block: auto rem(11);
   }
-  &__input-wrapper {
+  .inputWrapper {
     position: relative;
     &::before {
       content: "$";
@@ -26,7 +26,7 @@
       font: var(--light-16);
     }
   }
-  &__input {
+  .input {
     width: 100%;
     height: rem(46);
     border-radius: rem(7);
@@ -42,9 +42,5 @@
       margin: 0;
     }
   }
-  &__slider {
-    .rc-slider-handle {
-      display: none;
-    }
-  }
+  .slider {}
 }

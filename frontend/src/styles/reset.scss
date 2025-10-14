@@ -38,3 +38,7 @@ body {
 ul {
   list-style: none;
 }
+
+button {
+  @include reset-btn();
+}

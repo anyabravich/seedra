@@ -23,12 +23,12 @@ const ProductsNavigation = () => {
   useEffect(() => setIsMounted(true), []);
 
   return (
-    <div className={styles["products-navigation"]}>
+    <div className={styles.productsNavigation}>
       {isMounted ? (
         <>
-          <Search className={styles["products-navigation__search"]} />
+          <Search className={styles.search} />
           <Select
-            className={styles["products-navigation__select"]}
+            className={styles.select}
             value={selectedOption}
             onChange={(newValue) => setSelectedOption(newValue)}
             options={options}
@@ -40,7 +40,7 @@ const ProductsNavigation = () => {
             )}
             components={{
               SingleValue: () => (
-                <div className={styles["products-navigation__single-value"]}>
+                <div className={styles.singleValue}>
                   <span className="regular-14 text-secondary">Sort by:</span>
                   <span className="card-title">{selectedOption?.label}</span>
                 </div>

@@ -1,8 +1,5 @@
 import styles from "./page.module.scss";
-
-interface IFavorite {
-  variant: string;
-}
+import { IFavorite } from "./types";
 
 const Favorite = ({ variant }: IFavorite) => {
   switch (variant) {

@@ -7,11 +7,10 @@ import styles from "./page.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import FeedbackCard from "../FeedbackCard";
-
-type Swiper = /*unresolved*/ any;
+import { Swiper as SwiperType } from "./types";
 
 const Feedback = () => {
-  const swiperRef = useRef<Swiper | null>(null);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   const customizePagination = () => {
     if (swiperRef.current) {
@@ -29,7 +28,7 @@ const Feedback = () => {
 
   return (
     <section className={styles.feedback}>
-      <h2 className={`${styles.feedback__title} h2`}>What out clients say</h2>
+      <h2 className={`${styles.title} h2`}>What out clients say</h2>
 
       <Swiper
         ref={swiperRef}
@@ -38,7 +37,7 @@ const Feedback = () => {
           clickable: true,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className={styles.feedback__swiper}
+        className={styles.swiper}
         onInit={customizePagination}
         onSlideChange={customizePagination}
         breakpoints={{
@@ -55,7 +54,7 @@ const Feedback = () => {
         }}
       >
         {[...Array(6)].map((_, index) => (
-          <SwiperSlide key={index} className={styles.feedback__slide}>
+          <SwiperSlide key={index} className={styles.slide}>
             <FeedbackCard />
           </SwiperSlide>
         ))}

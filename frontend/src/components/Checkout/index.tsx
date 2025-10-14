@@ -2,20 +2,7 @@
 import React, { useState } from "react";
 import styles from "./page.module.scss";
 import CardCheckout from "../CardCheckout";
-
-interface ICard {
-  id: number;
-  name: string;
-  price: number;
-}
-
-interface ICheckout {
-  goods: ICard[];
-}
-
-interface Quantities {
-  [id: string]: number;
-}
+import { ICard, ICheckout, Quantities } from "./types";
 
 const Checkout = ({ goods }: ICheckout) => {
   const [quantities, setQuantities] = useState<Quantities>(() => {
@@ -45,10 +32,10 @@ const Checkout = ({ goods }: ICheckout) => {
   );
 
   return (
-    <section className={styles["checkout"]}>
-      <ul className={styles["checkout__list"]}>
+    <section className={styles.checkout}>
+      <ul className={styles.list}>
         {goods.map((item) => (
-          <li key={item.id} className={styles["checkout__item"]}>
+          <li key={item.id} className={styles.item}>
             <CardCheckout
               name={item.name}
               price={item.price}
@@ -60,13 +47,13 @@ const Checkout = ({ goods }: ICheckout) => {
           </li>
         ))}
       </ul>
-      <aside className={`${styles["checkout__summary"]} ${styles["summary"]}`}>
-        <p className={styles["summary__title"]}>Order summary</p>
-        <p className={styles["summary__total"]}>
-          <span className={styles["summary__total-count"]}>
+      <aside className={`${styles.summary}`}>
+        <p className={styles.title}>Order summary</p>
+        <p className={styles.total}>
+          <span className={styles.totalCount}>
             {totalItems} ITEMS
           </span>
-          <span className={styles["summary__total-price"]}>${total}</span>
+          <span className={styles.totalPrice}>${total}</span>
         </p>
       </aside>
     </section>

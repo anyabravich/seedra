@@ -8,7 +8,7 @@ import { ICategories } from "./types";
 const Categories = ({ activeIndex, onChangeCategory }: ICategories) => {
   return (
     <ul className={styles.categories}>
-      {categories.map(({ text }, index) => (
+      {categories.map((text, index) => (
         <Category
           key={text}
           text={text}

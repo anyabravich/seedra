@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./page.module.scss";
 import Container from "../Container";
 import BlogCard from "../BlogCard";
@@ -22,14 +22,14 @@ const Blog = () => {
   }
   return (
     <section className={styles.blog}>
-      <Container className={styles.blog__container}>
-        <header className={styles.blog__header}>
-          <h2 className={`${styles.blog__title} h2`}>Our blog.</h2>
-          <Button className={`${styles.blog__button}`} variant="border">
+      <Container className={styles.container}>
+        <header className={styles.header}>
+          <h2 className={`${styles.title} h2`}>Our blog.</h2>
+          <Button className={`${styles.button}`} variant="border">
             Go to our blog
           </Button>
         </header>
-        <div className={`${styles.blog__cards} slider`}>
+        <div className={`${styles.cards} slider`}>
           {isMobile ? (
             <Swiper slidesPerView={1.08} spaceBetween={11}>
               {data.map(
@@ -52,7 +52,7 @@ const Blog = () => {
               )}
             </Swiper>
           ) : (
-            <div className={styles.blog__grid}>
+            <div className={styles.grid}>
               {data.map(
                 (
                   { className, time, image, title, description, isSquare },

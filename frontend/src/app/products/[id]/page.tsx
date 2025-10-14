@@ -24,25 +24,25 @@ const Products = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <section className={styles["products"]}>
       <Container>
-        <section className={styles["products__grid"]}>
-          <div className={styles["products__gallery"]}>
+        <section className={styles.grid}>
+          <div className={styles.gallery}>
             <ProductsGallery />
           </div>
-          <div className={styles["products__info"]}>
-            <h1 className={`${styles["products__title"]} h3`}>{title}</h1>
-            <ul className={styles["products__labels"]}>
-              <li className={styles["products__label"]}>
+          <div className={styles.info}>
+            <h1 className={`${styles.title} h3`}>{title}</h1>
+            <ul className={styles.labels}>
+              <li className={styles.label}>
                 <Label text="available" />
               </li>
-              <li className={styles["products__label"]}>
+              <li className={styles.label}>
                 <Label text={category.toLowerCase()} />
               </li>
             </ul>
             <div
-              className={`${styles["products__quantity"]} ${styles["quantity"]}`}
+              className={`${styles.quantity} ${styles.quantityBlock}`}
             >
-              <header className={styles["quantity__header"]}>
-                <p className={styles["quantity__title"]}>
+              <header className={styles.quantityHeader}>
+                <p className={styles.quantityTitle}>
                   <span>Size</span>
                   <span>2 pack</span>
                 </p>
@@ -50,7 +50,7 @@ const Products = async ({ params }: { params: Promise<{ id: string }> }) => {
               </header>
             </div>
             <div
-              className={`${styles["products__packages"]} ${styles["packages"]}`}
+              className={`${styles.packages} ${styles.packagesBlock}`}
             >
               {packages.map(({ name, price }, index) => (
                 <Input
@@ -63,20 +63,20 @@ const Products = async ({ params }: { params: Promise<{ id: string }> }) => {
                 />
               ))}
             </div>
-            <div className={styles["products__prices"]}>
-              <div className={styles["products__price"]}>
+            <div className={styles.prices}>
+              <div className={styles.price}>
                 <p
-                  className={`${styles["products__old-price-value"]} medium-16 text-secondary`}
+                  className={`${styles.oldPriceValue} medium-16 text-secondary`}
                 >
                   $15.56
                 </p>
-                <p className={styles["products__actual-price-value"]}>$12.56</p>
+                <p className={styles.actualPriceValue}>$12.56</p>
               </div>
-              <div className={styles["products__buttons"]}>
-                <button className={styles["products__favorite"]} type="button">
+              <div className={styles.buttons}>
+                <button className={styles.favorite} type="button">
                   <Favorite variant="green" />
                 </button>
-                <Button className={styles["products__add"]} variant="primary">
+                <Button className={styles.add} variant="primary">
                   Add to cart
                 </Button>
               </div>
@@ -84,13 +84,13 @@ const Products = async ({ params }: { params: Promise<{ id: string }> }) => {
           </div>
         </section>
         <section
-          className={`${styles["products__information"]} ${styles["products-information"]}`}
+          className={`${styles.information} ${styles.productsInformation}`}
         >
-          <h2 className={`${styles["products-information__title"]} h2`}>
+          <h2 className={`${styles.informationTitle} h2`}>
             Product information.
           </h2>
-          <div className={styles["products-information__content"]}>
-            <ul className={`${styles["products-information__list"]} light-16`}>
+          <div className={styles.informationContent}>
+            <ul className={`${styles.informationList} light-16`}>
               <li>
                 EEDRA Cilantro Seeds&nbsp;&mdash; contains 300 seeds
                 in&nbsp;1&nbsp;Pack and professional instructions created
@@ -120,7 +120,7 @@ const Products = async ({ params }: { params: Promise<{ id: string }> }) => {
                 100% satisfaction
               </li>
             </ul>
-            <table className={styles["products-information__table"]}>
+            <table className={styles.informationTable}>
               <tbody>
                 <tr>
                   <td>Package Dimensions</td>

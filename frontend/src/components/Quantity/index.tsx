@@ -2,11 +2,7 @@
 import React, { useState } from "react";
 import styles from "./page.module.scss";
 import Icons from "../Icons";
-
-interface IQuantity {
-  className?: string;
-  handleQuantityChange: (newQuantity: number) => void;
-}
+import { IQuantity } from "./types";
 
 const Quantity = ({ className, handleQuantityChange }: IQuantity) => {
   const [quantity, setQuantity] = useState(1);
@@ -23,18 +19,18 @@ const Quantity = ({ className, handleQuantityChange }: IQuantity) => {
   };
 
   return (
-    <div className={`${styles["quantity"]} ${className}`}>
+    <div className={`${styles.root} ${className}`}>
       <button
-        className={styles["quantity__button"]}
+        className={styles.button}
         type="button"
         onClick={handleDecrement}
         disabled={quantity <= 1}
       >
         <Icons iconName="minus" />
       </button>
-      <output className={styles["quantity__value"]}>{quantity}</output>
+      <output className={styles.value}>{quantity}</output>
       <button
-        className={styles["quantity__button"]}
+        className={styles.button}
         type="button"
         onClick={handleIncrement}
       >

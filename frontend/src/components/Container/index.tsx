@@ -1,9 +1,5 @@
 import styles from "./page.module.scss";
-
-interface IContainer {
-  children: React.ReactNode;
-  className?: string;
-}
+import { IContainer } from "./types";
 
 const Container = ({ children, className }: IContainer) => {
   return <div className={`${styles.container} ${className}`}>{children}</div>;

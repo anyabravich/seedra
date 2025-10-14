@@ -21,8 +21,8 @@ const ProductsRelated = () => {
   }
 
   return (
-    <section className={styles["products-related"]}>
-      <h2 className={`${styles["products-related__title"]} h2`}>
+    <section className={styles.productsRelated}>
+      <h2 className={`${styles.title} h2`}>
         Related products.
       </h2>
       <div className={`slider`}>
@@ -35,7 +35,7 @@ const ProductsRelated = () => {
             ))}
           </Swiper>
         ) : (
-          <div className={styles["products-related__cards"]}>
+          <div className={styles.cards}>
             {PRODUCTS.map((props) => (
               <div key={props.id}>
                 <Card {...props} />

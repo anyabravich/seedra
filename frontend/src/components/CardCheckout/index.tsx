@@ -3,13 +3,7 @@
 import styles from "./page.module.scss";
 import Image from "next/image";
 import Quantity from "../Quantity";
-
-interface ICardCheckout {
-  name: string;
-  price: number;
-  quantity: number;
-  onQuantityChange: (newQuantity: number) => void;
-}
+import { ICardCheckout } from "./types";
 
 const CardCheckout = ({
   name,
@@ -20,17 +14,17 @@ const CardCheckout = ({
   const totalPrice = (price * quantity).toFixed(2);
 
   return (
-    <article className={styles["card-checkout"]}>
-      <div className={styles["card-checkout__img-wrapper"]}>
+    <article className={styles.cardCheckout}>
+      <div className={styles.imgWrapper}>
         <Image src="/card-1.jpg" alt="checkout" fill sizes="100%" />
       </div>
-      <p className={`${styles["card-checkout__title"]} regular-14`}>{name}</p>
+      <p className={`${styles.title} regular-14`}>{name}</p>
       <Quantity
-        className={styles["card-checkout__quantity"]}
+        className={styles.quantity}
         handleQuantityChange={onQuantityChange}
       />
-      <p className={`${styles["card-checkout__price"]}`}>${price}</p>
-      <p className={`${styles["card-checkout__total"]}`}>${totalPrice}</p>
+      <p className={`${styles.price}`}>${price}</p>
+      <p className={`${styles.total}`}>${totalPrice}</p>
     </article>
   );
 };

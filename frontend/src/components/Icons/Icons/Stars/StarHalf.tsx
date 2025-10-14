@@ -1,6 +1,4 @@
-interface IStarHalf {
-  size?: number;
-}
+import { IStarHalf } from "./types";
 
 const StarHalf = ({ size = 16 }: IStarHalf = {}) => {
   return (

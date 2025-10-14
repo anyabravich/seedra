@@ -1,7 +1,5 @@
-interface ISrat {
-  size: number;
-}
-const Star = ({ size = 16 }: ISrat) => {
+import { IStar } from "./types";
+const Star = ({ size = 16 }: IStar) => {
   return (
     <svg
       width={size}

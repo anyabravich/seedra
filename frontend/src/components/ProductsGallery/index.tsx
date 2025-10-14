@@ -10,11 +10,10 @@ import "swiper/css/thumbs";
 import Image from "next/image";
 import { useState } from "react";
 import { SLIDES } from "./data";
-
-type Swiper = any;
+import { Swiper as SwiperType } from "./types";
 
 const ProductsGallery = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | null>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
     <div>
