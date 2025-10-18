@@ -1,0 +1,184 @@
+.contactsPage {
+  border-radius: #{rem(24)};
+  background: var(--light-green);
+  margin-bottom: rem(112);
+
+  padding: rem(32) rem(40) rem(32) rem(59);
+
+  display: grid;
+  grid-template-columns: 1fr rem(536);
+  gap: rem(40);
+
+  @media (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    padding: rem(20) rem(16);
+    margin-bottom: rem(40);
+    gap: rem(20);
+  }
+}
+
+.title {
+  letter-spacing: -0.06em;
+  margin-bottom: rem(15);
+
+  @media (max-width: $tablet) {
+    margin-bottom: rem(12);
+  }
+}
+
+.content {
+  padding-block: rem(18) rem(16);
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: $tablet) {
+    padding-block: 0;
+  }
+}
+
+.contacts {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+
+  @media (max-width: $tablet) {
+    margin-top: 0;
+    gap: rem(16);
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+
+  @media (max-width: $tablet) {
+    gap: rem(16);
+  }
+
+  &:hover {
+    .icon {
+      background: var(--green-brand);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+
+    .link {
+      color: var(--green-brand);
+      transform: translateX(rem(4));
+    }
+  }
+
+  &:active {
+    .icon {
+      transform: scale(0.95);
+    }
+
+    .link {
+      transform: translateX(rem(2));
+    }
+  }
+}
+
+.icon {
+  --size: #{rem(56)};
+
+  width: var(--size);
+  height: var(--size);
+
+  background: var(--white);
+
+  border-radius: rem(16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--green-brand);
+
+  flex-shrink: 0;
+  transition: all $default-transition-duration $default-transition-function;
+
+  @media (max-width: $tablet) {
+    --size: #{rem(48)};
+    border-radius: rem(12);
+  }
+
+  svg {
+    --size: #{rem(24)};
+
+    width: var(--size);
+    height: var(--size);
+
+    @media (max-width: $tablet) {
+      --size: #{rem(20)};
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: all $default-transition-duration $default-transition-function;
+  cursor: pointer;
+}
+
+.form {
+  background: var(--white);
+  border-radius: rem(29);
+  padding: rem(26) rem(33);
+
+  @media (max-width: $tablet) {
+    padding: rem(20) rem(16);
+    border-radius: rem(20);
+  }
+}
+
+.text {
+  max-width: rem(249);
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+    margin-bottom: rem(16);
+  }
+}
+
+.formFooter {
+  display: flex;
+  gap: rem(20);
+  align-items: center;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: rem(16);
+  }
+}
+
+.inputs {
+  display: flex;
+
+  flex-direction: column;
+  gap: rem(20);
+  margin-bottom: rem(14);
+}
+
+.button {
+  min-width: rem(160);
+  padding-inline: rem(20);
+
+  @media (max-width: $tablet) {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+.privacy {
+  max-width: rem(222);
+
+  @media (max-width: $tablet) {
+    max-width: 100%;
+    text-align: center;
+  }
+}

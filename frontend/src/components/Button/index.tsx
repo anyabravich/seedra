@@ -15,7 +15,6 @@ const Button: FC<ButtonProps> = ({
   type = "button",
   ...restProps
 }) => {
-  // Формируем CSS классы
   const buttonClasses = buildButtonClasses(
     VARIANT_CLASSES[variant],
     SIZE_CLASSES[size],
@@ -25,7 +24,6 @@ const Button: FC<ButtonProps> = ({
     className
   );
 
-  // Проверяем состояние отключения
   const isDisabled = isButtonDisabled(disabled || false, loading);
 
   return (
@@ -36,10 +34,7 @@ const Button: FC<ButtonProps> = ({
       {...restProps}
     >
       {loading ? (
-        <span className={styles.loadingSpinner}>
-          {/* Здесь можно добавить спиннер */}
-          Loading...
-        </span>
+        <span className={styles.loadingSpinner}>Loading...</span>
       ) : (
         children
       )}

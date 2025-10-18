@@ -41,7 +41,7 @@ const Card = ({ id, title, price, url }: IProduct) => {
     }
 
     localStorage.setItem(storageKey, JSON.stringify(items));
-    setState((prevState) => ({ ...prevState, [type]: !prevState[type] }));
+    setState(prevState => ({ ...prevState, [type]: !prevState[type] }));
   };
 
   return (
@@ -74,14 +74,12 @@ const Card = ({ id, title, price, url }: IProduct) => {
         <footer className={styles.footer}>
           <p className={styles.price}>${price}</p>
           <button
-            className={`${styles.button} ${
-              state.goods ? styles.add : ""
-            }`}
+            className={`${styles.button} ${state.goods ? styles.add : ""}`}
             type="button"
             onClick={() => handleToggle("goods")}
           >
             {state.goods ? (
-              <Icons iconName="add-cart" />
+              <Icons iconName="available" />
             ) : (
               <Icons iconName="basket" />
             )}

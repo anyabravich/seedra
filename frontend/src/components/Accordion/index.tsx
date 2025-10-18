@@ -11,10 +11,7 @@ const Accordion = ({ title, children }: IAccordion) => {
 
   return (
     <div className={styles.accordion}>
-      <header
-        className={styles.header}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <header className={styles.header} onClick={() => setIsOpen(!isOpen)}>
         <p className={`${styles.title} medium-16`}>{title}</p>
         <motion.div
           className={styles.arrow}

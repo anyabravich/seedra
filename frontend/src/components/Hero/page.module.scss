@@ -84,7 +84,7 @@
   height: 100%;
   object-fit: cover;
   filter: drop-shadow(0 rem(4) rem(26) rgba(0, 0, 0, 0.41));
-  transform: translateZ(0); // safari
+  transform: translateZ(0);
   @media (max-width: $tablet) {
     object-fit: initial;
   }

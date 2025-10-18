@@ -12,9 +12,5 @@
 .available {
   color: var(--green-brand);
   border-color: transparent;
-  background: rgba(53, 151, 64, 0.08);
-}
-
-.text {
-  // Text styles will be inherited from regular-14 class
+  background: var(--invisible-green);
 }

@@ -12,7 +12,7 @@ const Category = ({ text, isActive, onClick, className }: ICategory) => {
       type="button"
       onClick={onClick}
     >
-      <Icons className={styles.icon} iconName={text} />
+      <Icons className={styles.icon} iconName={text as any} />
       <span className={`${styles.text} regular-14`}>{text}</span>
     </button>
   );

@@ -1,29 +1,39 @@
 import styles from "./page.module.scss";
 import { IInput } from "./types";
+import cn from "classnames";
 
-const Input = ({ label, type, className, price, name }: IInput) => {
+const Input = ({
+  label,
+  type,
+  className,
+  name,
+  placeholder,
+  value,
+  onChange,
+  error,
+  required = false,
+  disabled = false,
+}: IInput) => {
   return (
-    <label
-      className={`${styles["input"]} ${className && styles[className]} ${
-        type === "checkbox"
-          ? styles["_checkbox"]
-          : type === "radio"
-          ? styles["_radio"]
-          : styles["_text"]
-      }`}
-    >
-      <input className={styles.inputField} type={type} name={name} />
-      <span className={styles.box}></span>
-      <span className={`${styles.label} regular-14 text-secondary`}>
+    <div className={`${styles.textInputContainer} ${className}`}>
+      <label className={cn(styles.textLabel, "regular-14 text-secondary")}>
         {label}
-      </span>
-      {price && (
-        <div className={styles.price}>
-          <span className="regular-14 text-secondary">start from</span>
-          <span className="medium-16">${price}</span>
-        </div>
-      )}
-    </label>
+        {required && <span className={styles.required}>*</span>}
+      </label>
+      <input
+        type={type}
+        id={name}
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
+        className={`${styles.textInputField} text-secondary light-16 ${
+          error ? styles.error : ""
+        }`}
+      />
+      {error && <span className={styles.errorMessage}>{error}</span>}
+    </div>
   );
 };
 

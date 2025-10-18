@@ -10,10 +10,6 @@
   flex-direction: column;
 }
 
-.item {
-  // Item styles will be inherited from CardCheckout component
-}
-
 .summary {
   padding: rem(24) rem(34);
   box-shadow: 0 rem(4) rem(12) 0 rgba(207, 207, 207, 0.25);
@@ -30,12 +26,4 @@
 .total {
   display: flex;
   justify-content: space-between;
-}
-
-.totalCount {
-  // Total count styles
-}
-
-.totalPrice {
-  // Total price styles
 }

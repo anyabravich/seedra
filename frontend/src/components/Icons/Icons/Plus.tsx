@@ -17,7 +17,7 @@ const Plus = () => {
         <path
           id="Vector"
           d="M2.66 7.99L13.33 7.99M7.99 13.33L7.99 7.99L7.99 2.66"
-          stroke="#359740"
+          stroke="currentColor"
           strokeOpacity="1.000000"
           strokeWidth="1.500000"
           strokeLinecap="round"

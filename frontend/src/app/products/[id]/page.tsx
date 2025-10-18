@@ -3,7 +3,7 @@ import styles from "./page.module.scss";
 import Container from "@/components/Container";
 import ProductsGallery from "@/components/ProductsGallery";
 import Label from "@/components/Label";
-import Input from "@/components/Input";
+import Checkbox from "@/components/Checkbox";
 import { packages } from "./data";
 import Button from "@/components/Button";
 import Favorite from "@/components/Icons/Icons/Favorite";
@@ -38,26 +38,20 @@ const Products = async ({ params }: { params: Promise<{ id: string }> }) => {
                 <Label text={category.toLowerCase()} />
               </li>
             </ul>
-            <div
-              className={`${styles.quantity} ${styles.quantityBlock}`}
-            >
+            <div className={`${styles.quantity} ${styles.quantityBlock}`}>
               <header className={styles.quantityHeader}>
                 <p className={styles.quantityTitle}>
                   <span>Size</span>
                   <span>2 pack</span>
                 </p>
-                {/* каунтер */}
               </header>
             </div>
-            <div
-              className={`${styles.packages} ${styles.packagesBlock}`}
-            >
+            <div className={`${styles.packages} ${styles.packagesBlock}`}>
               {packages.map(({ name, price }, index) => (
-                <Input
+                <Checkbox
                   key={index}
                   className={"_package"}
                   label={name}
-                  type="radio"
                   price={price}
                   name="package"
                 />

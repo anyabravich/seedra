@@ -1,84 +1,55 @@
-.input {
-  --size: #{rem(20)};
-  position: relative;
-  display: inline-flex;
-  gap: rem(9);
-  align-items: center;
-  flex-shrink: 0;
-  cursor: pointer;
-  * {
-    cursor: pointer;
-  }
-  &._radio {
-    .box {
-      border-radius: 50%;
-    }
-    .inputField:checked + .box {
-      background: none;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: rem(8);
-        height: rem(8);
-        border-radius: 50%;
-        background: var(--green-brand);
-      }
-    }
-  }
-  &._package {
-    width: 100%;
-    padding: rem(14) rem(12);
-    height: rem(44);
-    border-radius: rem(8);
-    border: 1px solid var(--light-grey-stroke);
-    &:has(.inputField:checked) {
-      border-color: var(--green-brand);
-    }
-  }
-}
-
-.inputField {
-  width: var(--size);
-  height: var(--size);
-  position: absolute;
-  border: 0;
-  outline: 0;
-  opacity: 0;
-
-  &:hover + .box {
-    border-color: var(--green-brand);
-    transition: border-color 0.3s ease-out;
-  }
-  &:checked + .box {
-    border-color: var(--green-brand);
-    background: url("/checkbox.svg") center center no-repeat;
-    background-size: rem(13) rem(9);
-  }
-}
-
-.box {
-  display: block;
-  border-radius: rem(6);
-  width: var(--size);
-  height: var(--size);
-  border: 1px solid var(--light-grey-stroke);
-  transition: border-color 0.3s ease-out;
-  flex-shrink: 0;
-}
-
-.label {
-  @media (max-width: $tablet) {
-    max-width: rem(171);
-  }
-}
-
-.price {
-  margin-left: auto;
+.textInputContainer {
   display: flex;
-  gap: rem(8);
-  align-items: center;
+  flex-direction: column;
+  gap: rem(2);
+  width: 100%;
+}
+
+.required {
+  color: var(--red);
+  margin-left: rem(4);
+}
+
+.textInputField {
+  width: 100%;
+  padding: rem(13) rem(24);
+  border: 1px solid var(--light-grey-stroke);
+  font-family: inherit;
+  border-radius: rem(4);
+  transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+
+  &:focus {
+    outline: none;
+    border-color: var(--green-brand);
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.1);
+  }
+
+  &:hover:not(:disabled) {
+    border-color: var(--green-brand);
+  }
+
+  &:disabled {
+    background-color: var(--light-grey);
+    color: var(--grey);
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: var(--grey);
+  }
+
+  &.error {
+    border-color: var(--red);
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+    }
+  }
+}
+
+.errorMessage {
+  font-size: rem(12);
+  color: var(--red);
+  line-height: 1.4;
+  margin-top: rem(4);
 }

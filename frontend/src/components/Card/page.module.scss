@@ -65,9 +65,11 @@
   height: rem(48);
   border: rem(1) solid var(--light-grey-stroke);
   z-index: 2;
+
   &.add {
     background: var(--green-brand);
     border-color: transparent;
+    color: var(--white);
   }
 }
 
@@ -84,4 +86,3 @@
   align-items: center;
   justify-content: center;
 }
-

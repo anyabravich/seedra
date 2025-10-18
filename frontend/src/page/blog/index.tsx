@@ -8,7 +8,7 @@ import cn from "classnames";
 const BlogPage = () => {
   return (
     <div className={styles.blogPage}>
-      <BannerHero />
+      <BannerHero title="Blog" text="Read our latest articles and tips" />
 
       <ProductsNavigation />
 

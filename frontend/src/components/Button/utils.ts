@@ -1,8 +1,5 @@
 import styles from "./page.module.scss";
 
-/**
- * Формирует массив CSS классов для кнопки
- */
 export const buildButtonClasses = (
   variant: string,
   size: string,
@@ -20,15 +17,12 @@ export const buildButtonClasses = (
     disabled && styles._disabled,
     customClassName,
   ]
-    .filter(Boolean) // Убираем falsy значения
+    .filter(Boolean)
     .join(" ");
 
   return classes;
 };
 
-/**
- * Проверяет, должна ли кнопка быть отключена
- */
 export const isButtonDisabled = (
   disabled: boolean,
   loading: boolean

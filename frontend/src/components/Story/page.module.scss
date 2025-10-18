@@ -1,0 +1,75 @@
+@import "@/styles/mixins.scss";
+
+.story {
+  padding-block: rem(32) rem(46);
+
+  @media (max-width: $tablet) {
+    padding-block: rem(40) rem(40);
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: rem(540) 1fr;
+  gap: rem(65);
+  align-items: center;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: rem(40);
+  }
+}
+
+.imageContainer {
+  --size: #{rem(540)};
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  overflow: hidden;
+  border-radius: rem(28);
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    max-width: rem(400);
+    margin: 0 auto;
+  }
+}
+
+.image {
+  border-radius: rem(12);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+
+  @media (max-width: $tablet) {
+    gap: rem(20);
+  }
+}
+
+.title {
+  margin-bottom: 0;
+
+  @media (max-width: $tablet) {
+    text-align: center;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+
+  @media (max-width: $tablet) {
+    gap: rem(16);
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.6;
+  }
+}

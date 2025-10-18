@@ -1,0 +1,57 @@
+.textInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: rem(2);
+  width: 100%;
+}
+
+.required {
+  color: var(--red);
+  margin-left: rem(4);
+}
+
+.textInputField {
+  width: 100%;
+  padding: rem(13) rem(24);
+  border: 1px solid var(--light-grey-stroke);
+  font-family: inherit;
+  border-radius: rem(4);
+  transition: border-color 0.3s ease-out, box-shadow 0.3s ease-out;
+  resize: vertical;
+  min-height: rem(133);
+
+  &:focus {
+    outline: none;
+    border-color: var(--green-brand);
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.1);
+  }
+
+  &:hover:not(:disabled) {
+    border-color: var(--green-brand);
+  }
+
+  &:disabled {
+    background-color: var(--light-grey);
+    color: var(--grey);
+    cursor: not-allowed;
+  }
+
+  &::placeholder {
+    color: var(--grey);
+  }
+
+  &.error {
+    border-color: var(--red);
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.1);
+    }
+  }
+}
+
+.errorMessage {
+  font-size: rem(12);
+  color: var(--red);
+  line-height: 1.4;
+  margin-top: rem(4);
+}

@@ -1,7 +1,12 @@
 export interface IInput {
   label: string;
-  type: "checkbox" | "radio" | "text";
+  type: "text" | "email" | "password" | "tel";
   className?: string;
-  price?: string;
   name?: string;
+  placeholder?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
+  required?: boolean;
+  disabled?: boolean;
 }

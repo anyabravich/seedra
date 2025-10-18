@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Container from "../Container";
 import styles from "./page.module.scss";
+import { HelpProps } from "./types";
+import cn from "classnames";
 
-const Help = () => {
+const Help = ({ className }: HelpProps) => {
   return (
-    <section className={styles.help}>
+    <section className={cn(styles.help, className)}>
       <Container className={styles.container}>
         <div>
           <h2 className={`${styles.title} h2`}>

@@ -25,7 +25,7 @@ const FeedbackCard = () => {
       <Rating
         className={styles.rating}
         rating={4.5}
-        ratingCount={false}
+        ratingCount={0}
         size={24}
       />
       <p className={`${styles.description} light-16`}>

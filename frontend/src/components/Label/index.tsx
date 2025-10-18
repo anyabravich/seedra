@@ -9,7 +9,7 @@ const Label = ({ text }: ILabel) => {
         text === "available" && styles.available
       }`}
     >
-      <Icons iconName={text} />
+      <Icons iconName={text as any} />
       <span className={`${styles.text} regular-14`}>{text}</span>
     </div>
   );

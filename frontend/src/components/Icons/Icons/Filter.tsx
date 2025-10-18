@@ -25,7 +25,7 @@ const Filter = () => {
         <path
           id="Vector 148"
           d="M15 3L10.8 8.6C10.6 8.85 10.5 9.17 10.5 9.5L10.5 13.5L7.5 15L7.5 9.5C7.5 9.17 7.39 8.85 7.2 8.6L3 3L15 3Z"
-          stroke="#359740"
+          stroke="currentColor"
           strokeOpacity="1.000000"
           strokeWidth="1.500000"
           strokeLinejoin="round"

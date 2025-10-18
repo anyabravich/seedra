@@ -25,7 +25,7 @@ const Available = () => {
         <path
           id="Vector 5"
           d="M5 12L10 17L20 7"
-          stroke="#4FA083"
+          stroke="currentColor"
           strokeOpacity="1.000000"
           strokeWidth="2.000000"
           strokeLinejoin="round"

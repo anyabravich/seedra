@@ -6,10 +6,6 @@
   }
 }
 
-.container {
-  // Container styles will be inherited from Container component
-}
-
 .header {
   display: flex;
   align-items: center;
@@ -18,12 +14,4 @@
   @media (max-width: $tablet) {
     margin-bottom: rem(21);
   }
-}
-
-.title {
-  // Title styles will be inherited from h2 class
-}
-
-.button {
-  // Button styles will be inherited from Button component
 }

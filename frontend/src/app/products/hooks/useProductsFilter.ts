@@ -11,12 +11,12 @@ export const useProductsFilter = (products: IProduct[]) => {
   };
 
   const filteredProducts = useMemo(() => {
-    const filtered = products.filter((product) => product.category === category);
-    
+    const filtered = products.filter(product => product.category === category);
+
     if (filtered.length > 0) {
       return filtered;
     }
-    
+
     return category === "all" ? products : [];
   }, [products, category]);
 
@@ -26,4 +26,3 @@ export const useProductsFilter = (products: IProduct[]) => {
     handleChangeCategory,
   };
 };
-

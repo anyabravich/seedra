@@ -19,7 +19,9 @@ import Bundles from "./Icons/Bundles";
 import Fruits from "./Icons/Fruits";
 import Supplies from "./Icons/Supplies";
 import Flowers from "./Icons/Flowers";
-import AddCart from "./Icons/AddCart";
+import Calling from "./Icons/Calling";
+import Message from "./Icons/Message";
+import Close from "./Icons/Close";
 
 const Icons = ({ iconName, className }: IIcons) => {
   let icon;
@@ -34,11 +36,14 @@ const Icons = ({ iconName, className }: IIcons) => {
     case "search":
       icon = <Search />;
       break;
+    case "msg":
+      icon = <Message />;
+      break;
     case "basket":
       icon = <Basket />;
       break;
-    case "add-cart":
-      icon = <AddCart />;
+    case "calling":
+      icon = <Calling />;
       break;
     case "all":
       icon = <All />;
@@ -81,6 +86,9 @@ const Icons = ({ iconName, className }: IIcons) => {
       break;
     case "plus":
       icon = <Plus />;
+      break;
+    case "close":
+      icon = <Close />;
       break;
     default:
       icon = <i>Иконка не найдена</i>;

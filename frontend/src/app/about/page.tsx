@@ -1,7 +1,5 @@
-import Container from "@/components/Container";
+import AboutPage from "@/page/about";
 
-const About = () => {
-  return <Container>About</Container>;
-};
+const About = () => <AboutPage />;
 
 export default About;

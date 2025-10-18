@@ -1,0 +1,188 @@
+@import "../../styles/mixins.scss";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: rem(40) rem(20);
+}
+
+.title {
+  font-size: rem(32);
+  font-weight: 700;
+  color: var(--dark-grey);
+  text-align: center;
+  margin-bottom: rem(40);
+}
+
+.section {
+  margin-bottom: rem(60);
+  padding: rem(30);
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: rem(8);
+  background: var(--white);
+}
+
+.sectionTitle {
+  font-size: rem(24);
+  font-weight: 600;
+  color: var(--dark-grey);
+  margin-bottom: rem(30);
+  padding-bottom: rem(10);
+  border-bottom: 2px solid var(--green-brand);
+}
+
+.iconsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: rem(20);
+}
+
+.iconItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(15);
+  border: 1px solid var(--light-grey-stroke);
+  border-radius: rem(8);
+  background: var(--light-grey);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: var(--green-brand);
+    background: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.iconName {
+  font-size: rem(12);
+  color: var(--grey);
+  margin-top: rem(8);
+  text-align: center;
+  word-break: break-all;
+}
+
+.buttonsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: rem(30);
+}
+
+.buttonGroup {
+  h3 {
+    font-size: rem(16);
+    font-weight: 600;
+    color: var(--dark-grey);
+    margin-bottom: rem(15);
+  }
+
+  > *:not(h3) {
+    margin-right: rem(10);
+    margin-bottom: rem(10);
+  }
+}
+
+.inputsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(40);
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: rem(20);
+  }
+}
+
+.inputGroup {
+  h3 {
+    font-size: rem(18);
+    font-weight: 600;
+    color: var(--dark-grey);
+    margin-bottom: rem(20);
+  }
+
+  > *:not(h3) {
+    margin-bottom: rem(20);
+  }
+}
+
+.checkboxesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: rem(15);
+}
+
+.ratingGroup,
+.quantityGroup {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+
+  span {
+    font-size: rem(14);
+    color: var(--grey);
+  }
+}
+
+.sliderGroup {
+  max-width: 400px;
+}
+
+.accordionGroup {
+  max-width: 600px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: rem(20);
+}
+
+.labelsGrid {
+  display: flex;
+  gap: rem(15);
+  flex-wrap: wrap;
+}
+
+.searchGroup {
+  max-width: 400px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: rem(20) rem(10);
+  }
+
+  .section {
+    padding: rem(20);
+    margin-bottom: rem(40);
+  }
+
+  .title {
+    font-size: rem(24);
+  }
+
+  .sectionTitle {
+    font-size: rem(20);
+  }
+
+  .iconsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: rem(15);
+  }
+
+  .buttonsGrid {
+    grid-template-columns: 1fr;
+    gap: rem(20);
+  }
+
+  .buttonGroup {
+    > *:not(h3) {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: rem(10);
+    }
+  }
+}
