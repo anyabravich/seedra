@@ -1,8 +1,10 @@
+import { FC } from "react";
+
 import styles from "./page.module.scss";
 import { IRating } from "./types";
 import { useRating, UseRatingReturn } from "../../hooks/useRating";
 
-const Rating = ({
+const Rating: FC<IRating> = ({
   rating,
   ratingCount,
   className,
@@ -28,3 +30,4 @@ const Rating = ({
 };
 
 export default Rating;
+export type { IRating } from "./types";

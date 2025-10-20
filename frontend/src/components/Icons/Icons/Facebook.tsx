@@ -1,6 +1,8 @@
+import { FC } from "react";
+
 import styles from "../page.module.scss";
 
-const Facebook = () => {
+const Facebook: FC = () => {
   return (
     <svg
       className={styles.icon__svg}

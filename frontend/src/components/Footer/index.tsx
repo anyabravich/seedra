@@ -1,9 +1,11 @@
-import styles from "./page.module.scss";
-import Link from "next/link";
+import { FC } from "react";
 import Image from "next/image";
-import Container from "../Container";
+import Link from "next/link";
 
-const Footer = () => {
+import Container from "../Container";
+import styles from "./page.module.scss";
+
+const Footer: FC = () => {
   return (
     <footer className={styles.footer}>
       <Container className={`${styles.container} container`}>

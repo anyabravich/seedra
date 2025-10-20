@@ -1,8 +1,10 @@
-import styles from "./page.module.scss";
+import { FC } from "react";
 import Image from "next/image";
-import Rating from "../Rating";
 
-const FeedbackCard = () => {
+import Rating from "../Rating";
+import styles from "./page.module.scss";
+
+const FeedbackCard: FC = () => {
   return (
     <article className={styles.feedbackCard}>
       <header className={styles.header}>
@@ -14,12 +16,8 @@ const FeedbackCard = () => {
           height={64}
         />
         <div>
-          <p className={`${styles.name} medium-18`}>
-            Carla Samantoes-Diego
-          </p>
-          <time className={`${styles.time} regular-14`}>
-            12.09.2021
-          </time>
+          <p className={`${styles.name} medium-18`}>Carla Samantoes-Diego</p>
+          <time className={`${styles.time} regular-14`}>12.09.2021</time>
         </div>
       </header>
       <Rating

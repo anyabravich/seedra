@@ -1,20 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import { usePathname } from "next/navigation";
-import Container from "../Container";
-import Navigation from "../Navigation";
-import styles from "./page.module.scss";
-import Link from "next/link";
-import Icons from "../Icons";
-import Search from "../Search";
-import Button from "../Button";
-import Favorite from "../Icons/Icons/Favorite";
+import { FC, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import Button from "../Button";
+import Container from "../Container";
+import Favorite from "../Icons/Icons/Favorite";
+import Icons from "../Icons";
+import Navigation from "../Navigation";
+import Search from "../Search";
 import { socialLinks, headerButtons } from "./data";
 import { menu } from "../Navigation/data";
+import styles from "./page.module.scss";
 
-const Header = () => {
+const Header: FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 

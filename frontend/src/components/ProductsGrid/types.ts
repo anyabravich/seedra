@@ -1,4 +1,4 @@
-import { IProduct } from "../Products/types";
+import { IProduct } from "@/hooks/useProductFilter/types";
 
 export interface IProductsGrid {
   products: { cards: IProduct[] };

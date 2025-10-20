@@ -1,12 +1,14 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { FC } from "react";
 import Link from "next/link";
-import { menu } from "./data";
-import { MenuItem } from "./types";
-import styles from "./page.module.scss";
+import { usePathname } from "next/navigation";
 
-const Navigation = () => {
+import { menu } from "./data";
+import styles from "./page.module.scss";
+import { MenuItem } from "./types";
+
+const Navigation: FC = () => {
   const pathname = usePathname();
 
   return (
@@ -31,4 +33,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

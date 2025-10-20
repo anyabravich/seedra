@@ -1,10 +1,11 @@
+import { FC } from "react";
+
 import Filters from "../Filters";
 import ProductsCards from "../ProductsCards";
-
 import styles from "./page.module.scss";
 import { IProductsGrid } from "./types";
 
-const ProductsGrid = (products: IProductsGrid) => {
+const ProductsGrid: FC<IProductsGrid> = products => {
   return (
     <div className={styles["products-grid"]}>
       <Filters hideMobile={true} />
@@ -14,3 +15,4 @@ const ProductsGrid = (products: IProductsGrid) => {
 };
 
 export default ProductsGrid;
+export type { IProductsGrid } from "./types";

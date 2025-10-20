@@ -1,10 +1,12 @@
-import styles from "./page.module.scss";
-import Container from "../Container";
+import { FC } from "react";
+
 import Button from "../Button";
 import BlogList from "../BlogList";
+import Container from "../Container";
 import { blogData as data } from "../../mock/blogData";
+import styles from "./page.module.scss";
 
-const Blog = () => {
+const Blog: FC = () => {
   return (
     <section className={styles.blog}>
       <Container className={styles.container}>

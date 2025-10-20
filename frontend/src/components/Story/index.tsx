@@ -1,8 +1,10 @@
+import { FC } from "react";
 import Image from "next/image";
-import styles from "./page.module.scss";
-import Container from "../Container";
 
-const Story = () => {
+import Container from "../Container";
+import styles from "./page.module.scss";
+
+const Story: FC = () => {
   return (
     <section className={styles.story}>
       <Container className={styles.container}>

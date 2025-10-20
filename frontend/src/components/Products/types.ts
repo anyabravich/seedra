@@ -1,11 +1,9 @@
-export interface IProduct {
-  id: number;
-  title: string;
-  price: number;
-  url: string;
-  category?: string;
-}
+import { IProduct } from "@/hooks/useProductFilter";
+
+export interface IProductsCard extends IProduct {}
 
 export interface IProducts {
-  cards: IProduct[];
+  cards: IProductsCard[];
 }
+
+export interface IProductsProps extends IProducts {}

@@ -1,6 +1,8 @@
+import { FC } from "react";
+
 import styles from "../page.module.scss";
 
-const Search = () => {
+const Search: FC = () => {
   return (
     <svg
       className={styles.icon__svg}

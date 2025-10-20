@@ -1,13 +1,13 @@
+import { FC } from "react";
+
 import Icons from "../Icons";
 import styles from "./page.module.scss";
 import { ILabel } from "./types";
 
-const Label = ({ text }: ILabel) => {
+const Label: FC<ILabel> = ({ text }) => {
   return (
     <div
-      className={`${styles.label} ${
-        text === "available" && styles.available
-      }`}
+      className={`${styles.label} ${text === "available" && styles.available}`}
     >
       <Icons iconName={text as any} />
       <span className={`${styles.text} regular-14`}>{text}</span>
@@ -16,3 +16,4 @@ const Label = ({ text }: ILabel) => {
 };
 
 export default Label;
+export type { ILabel } from "./types";

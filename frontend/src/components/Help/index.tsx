@@ -1,10 +1,12 @@
+import { FC } from "react";
 import Image from "next/image";
+import cn from "classnames";
+
 import Container from "../Container";
 import styles from "./page.module.scss";
 import { HelpProps } from "./types";
-import cn from "classnames";
 
-const Help = ({ className }: HelpProps) => {
+const Help: FC<HelpProps> = ({ className }) => {
   return (
     <section className={cn(styles.help, className)}>
       <Container className={styles.container}>
@@ -49,3 +51,4 @@ const Help = ({ className }: HelpProps) => {
 };
 
 export default Help;
+export type { HelpProps } from "./types";

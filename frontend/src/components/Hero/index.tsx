@@ -1,9 +1,11 @@
-import styles from "./page.module.scss";
-import Container from "../Container";
+import { FC } from "react";
 import Image from "next/image";
-import Button from "../Button";
 
-const Hero = () => {
+import Button from "../Button";
+import Container from "../Container";
+import styles from "./page.module.scss";
+
+const Hero: FC = () => {
   return (
     <section className={styles.hero}>
       <Container className={styles.container}>

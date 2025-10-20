@@ -1,12 +1,13 @@
+import { FC } from "react";
+
 import Accordion from "../Accordion";
-import styles from "./page.module.scss";
 import Checkbox from "../Checkbox";
+import RangeSlider from "../RangeSlider";
 import { checkboxes } from "./data";
+import styles from "./page.module.scss";
 import { IFilters } from "./types";
 
-import RangeSlider from "../RangeSlider";
-
-const Filters = ({ hideMobile }: IFilters) => {
+const Filters: FC<IFilters> = ({ hideMobile }) => {
   return (
     <aside className={`${styles.filters} ${hideMobile && styles.hideMobile}`}>
       <p className={`${styles.title} regular-14 ttu`}>Filters</p>
@@ -53,3 +54,4 @@ const Filters = ({ hideMobile }: IFilters) => {
 };
 
 export default Filters;
+export type { IFilters } from "./types";

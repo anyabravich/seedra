@@ -26,6 +26,7 @@ const UIKitPage = () => {
   const [checkboxChecked, setCheckboxChecked] = useState(false);
   const [rating, setRating] = useState(3);
   const [quantity, setQuantity] = useState(1);
+  const [rangeValue, setRangeValue] = useState<[number, number]>([20, 80]);
 
   const iconNames: IconName[] = [
     "instagram",
@@ -235,7 +236,12 @@ const UIKitPage = () => {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Количество</h2>
         <div className={styles.quantityGroup}>
-          <Quantity handleQuantityChange={setQuantity} />
+          <Quantity 
+            value={quantity}
+            onChange={setQuantity}
+            min={1}
+            max={10}
+          />
           <span>Текущее количество: {quantity}</span>
         </div>
       </section>
@@ -243,7 +249,15 @@ const UIKitPage = () => {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Слайдер</h2>
         <div className={styles.sliderGroup}>
-          <RangeSlider />
+          <RangeSlider
+            value={rangeValue}
+            onChange={setRangeValue}
+            min={0}
+            max={100}
+          />
+          <span>
+            Текущие значения: {rangeValue[0]} - {rangeValue[1]}
+          </span>
         </div>
       </section>
 

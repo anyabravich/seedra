@@ -1,9 +1,10 @@
-import styles from "./page.module.scss";
+import { FC } from "react";
 
 import Icons from "../Icons";
+import styles from "./page.module.scss";
 import { ICategory } from "./types";
 
-const Category = ({ text, isActive, onClick, className }: ICategory) => {
+const Category: FC<ICategory> = ({ text, isActive, onClick, className }) => {
   return (
     <button
       className={`${styles.category} ${isActive && styles._active} ${
@@ -19,3 +20,4 @@ const Category = ({ text, isActive, onClick, className }: ICategory) => {
 };
 
 export default Category;
+export type { ICategory } from "./types";

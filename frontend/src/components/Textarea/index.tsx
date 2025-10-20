@@ -1,8 +1,10 @@
-import styles from "./page.module.scss";
-import { ITextarea } from "./types";
+import { FC } from "react";
 import cn from "classnames";
 
-const Textarea = ({
+import styles from "./page.module.scss";
+import { ITextarea } from "./types";
+
+const Textarea: FC<ITextarea> = ({
   label,
   name,
   placeholder,
@@ -36,3 +38,4 @@ const Textarea = ({
 };
 
 export default Textarea;
+export type { ITextarea } from "./types";

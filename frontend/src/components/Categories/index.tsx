@@ -1,11 +1,13 @@
 "use client";
 
+import { FC } from "react";
+
 import Category from "../Category";
-import styles from "./page.module.scss";
 import { categories } from "./data";
+import styles from "./page.module.scss";
 import { ICategories } from "./types";
 
-const Categories = ({ activeIndex, onChangeCategory }: ICategories) => {
+const Categories: FC<ICategories> = ({ activeIndex, onChangeCategory }) => {
   return (
     <ul className={styles.categories}>
       {categories.map((text, index) => (
@@ -21,3 +23,4 @@ const Categories = ({ activeIndex, onChangeCategory }: ICategories) => {
 };
 
 export default Categories;
+export type { ICategories } from "./types";

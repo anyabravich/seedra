@@ -1,6 +1,8 @@
+import { FC } from "react";
+
 import styles from "../page.module.scss";
 
-const Instagram = () => {
+const Instagram: FC = () => {
   return (
     <svg
       className={styles.icon__svg}

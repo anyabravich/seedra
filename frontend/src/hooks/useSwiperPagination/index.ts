@@ -1,0 +1,1 @@
+export { useSwiperPagination } from "./useSwiperPagination";

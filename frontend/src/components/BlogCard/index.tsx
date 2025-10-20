@@ -1,11 +1,13 @@
-import styles from "./page.module.scss";
-import Button from "../Button";
-import Image from "next/image";
+import { FC } from "react";
 import classNames from "classnames";
+import Image from "next/image";
 import Link from "next/link";
+
+import Button from "../Button";
+import styles from "./page.module.scss";
 import { IBlogCard } from "./types";
 
-const BlogCard = ({
+const BlogCard: FC<IBlogCard> = ({
   time,
   image,
   title,
@@ -59,3 +61,4 @@ const BlogCard = ({
 };
 
 export default BlogCard;
+export type { IBlogCard } from "./types";

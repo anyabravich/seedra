@@ -1,11 +1,13 @@
 "use client";
 
-import styles from "./page.module.scss";
+import { FC } from "react";
 import Image from "next/image";
+
 import Quantity from "../Quantity";
+import styles from "./page.module.scss";
 import { ICardCheckout } from "./types";
 
-const CardCheckout = ({
+const CardCheckout: FC<ICardCheckout> = ({
   name,
   price,
   quantity,
@@ -21,7 +23,9 @@ const CardCheckout = ({
       <p className={`${styles.title} regular-14`}>{name}</p>
       <Quantity
         className={styles.quantity}
-        handleQuantityChange={onQuantityChange}
+        value={quantity}
+        onChange={onQuantityChange}
+        min={1}
       />
       <p className={`${styles.price}`}>${price}</p>
       <p className={`${styles.total}`}>${totalPrice}</p>
@@ -30,3 +34,4 @@ const CardCheckout = ({
 };
 
 export default CardCheckout;
+export type { ICardCheckout } from "./types";

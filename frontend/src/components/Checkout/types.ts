@@ -1,13 +1,9 @@
-export interface ICard {
-  id: number;
-  name: string;
-  price: number;
-}
+import { ICheckoutItem } from "@/hooks/useCheckout";
+
+export interface ICheckoutCard extends ICheckoutItem {}
 
 export interface ICheckout {
-  goods: ICard[];
+  goods: ICheckoutCard[];
 }
 
-export interface Quantities {
-  [id: string]: number;
-}
+export interface ICheckoutProps extends ICheckout {}

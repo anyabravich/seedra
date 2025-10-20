@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import BlogCard from "../BlogCard";
 import { BlogDataItem } from "../../types/blog";
 import styles from "./page.module.scss";
@@ -14,7 +15,7 @@ interface BlogListProps {
   disableSlider?: boolean;
 }
 
-const BlogList = ({
+const BlogList: FC<BlogListProps> = ({
   data,
   className,
   limit,

@@ -1,30 +1,16 @@
 "use client";
 
-import { useRef } from "react";
+import { FC } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import styles from "./page.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import FeedbackCard from "../FeedbackCard";
-import { Swiper as SwiperType } from "./types";
+import { useSwiperPagination } from "@/hooks/useSwiperPagination";
 
-const Feedback = () => {
-  const swiperRef = useRef<SwiperType | null>(null);
-
-  const customizePagination = () => {
-    if (swiperRef.current) {
-      const swiper = swiperRef.current.swiper;
-      const pagination = swiper.pagination;
-      const bullets = pagination.bullets;
-
-      bullets.forEach((bullet: HTMLElement, index: number) => {
-        if (index >= swiper.slidesPerView - 1) {
-          bullet.innerHTML = "";
-        }
-      });
-    }
-  };
+const Feedback: FC = () => {
+  const { swiperRef, customizePagination } = useSwiperPagination();
 
   return (
     <section className={styles.feedback}>

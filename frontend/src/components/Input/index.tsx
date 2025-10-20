@@ -1,8 +1,10 @@
-import styles from "./page.module.scss";
-import { IInput } from "./types";
+import { FC } from "react";
 import cn from "classnames";
 
-const Input = ({
+import styles from "./page.module.scss";
+import { IInput } from "./types";
+
+const Input: FC<IInput> = ({
   label,
   type,
   className,
@@ -38,3 +40,4 @@ const Input = ({
 };
 
 export default Input;
+export type { IInput } from "./types";

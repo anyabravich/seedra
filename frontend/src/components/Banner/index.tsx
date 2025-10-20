@@ -1,7 +1,9 @@
-import styles from "./page.module.scss";
-import Container from "../Container";
+import { FC } from "react";
 
-const Banner = () => {
+import Container from "../Container";
+import styles from "./page.module.scss";
+
+const Banner: FC = () => {
   return (
     <article className={`${styles.banner}`}>
       <Container className={styles.container}>

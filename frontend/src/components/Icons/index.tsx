@@ -1,29 +1,30 @@
+import { FC } from "react";
+
+import All from "./Icons/All";
+import Arrow from "./Icons/Arrow";
+import Available from "./Icons/Available";
+import Basket from "./Icons/Basket";
+import Bundles from "./Icons/Bundles";
+import Calling from "./Icons/Calling";
+import Close from "./Icons/Close";
+import Facebook from "./Icons/Facebook";
+import Filter from "./Icons/Filter";
+import Flowers from "./Icons/Flowers";
+import Fruits from "./Icons/Fruits";
+import Herbs from "./Icons/Herbs";
+import Instagram from "./Icons/Instagram";
+import Menu from "./Icons/Menu";
+import Message from "./Icons/Message";
+import Minus from "./Icons/Minus";
+import Plus from "./Icons/Plus";
+import RangeLine from "./Icons/RangeLine";
+import Search from "./Icons/Search";
+import Supplies from "./Icons/Supplies";
+import Tomato from "./Icons/Tomato";
 import styles from "./page.module.scss";
 import { IIcons } from "./types";
 
-import Instagram from "./Icons/Instagram";
-import Facebook from "./Icons/Facebook";
-import Search from "./Icons/Search";
-import Basket from "./Icons/Basket";
-import All from "./Icons/All";
-import Menu from "./Icons/Menu";
-import Arrow from "./Icons/Arrow";
-import RangeLine from "./Icons/RangeLine";
-import Filter from "./Icons/Filter";
-import Available from "./Icons/Available";
-import Tomato from "./Icons/Tomato";
-import Herbs from "./Icons/Herbs";
-import Minus from "./Icons/Minus";
-import Plus from "./Icons/Plus";
-import Bundles from "./Icons/Bundles";
-import Fruits from "./Icons/Fruits";
-import Supplies from "./Icons/Supplies";
-import Flowers from "./Icons/Flowers";
-import Calling from "./Icons/Calling";
-import Message from "./Icons/Message";
-import Close from "./Icons/Close";
-
-const Icons = ({ iconName, className }: IIcons) => {
+const Icons: FC<IIcons> = ({ iconName, className }) => {
   let icon;
 
   switch (iconName) {
@@ -98,3 +99,4 @@ const Icons = ({ iconName, className }: IIcons) => {
 };
 
 export default Icons;
+export type { IIcons } from "./types";

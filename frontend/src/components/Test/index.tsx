@@ -1,8 +1,10 @@
 "use client";
 
+import { FC } from "react";
+
 import ButtonExamples from "../Button/examples";
 
-const Test = () => {
+const Test: FC = () => {
   return (
     <div>
       <ButtonExamples />

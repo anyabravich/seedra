@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Search from "../Search";
+import { FC, useEffect, useState } from "react";
 import Select from "react-select";
 
+import Search from "../Search";
 import styles from "./page.module.scss";
 
 const options = [
@@ -12,7 +12,7 @@ const options = [
   { value: "vanilla", label: "Vanilla" },
 ];
 
-const ProductsNavigation = () => {
+const ProductsNavigation: FC = () => {
   const [selectedOption, setSelectedOption] = useState<{
     value: string;
     label: string;

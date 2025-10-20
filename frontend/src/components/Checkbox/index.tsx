@@ -1,7 +1,9 @@
+import { FC } from "react";
+
 import styles from "./page.module.scss";
 import { ICheckbox } from "./types";
 
-const Checkbox = ({
+const Checkbox: FC<ICheckbox> = ({
   label,
   checked,
   onChange,
@@ -35,3 +37,4 @@ const Checkbox = ({
 };
 
 export default Checkbox;
+export type { ICheckbox } from "./types";

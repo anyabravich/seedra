@@ -1,10 +1,12 @@
+import { FC } from "react";
 import Image from "next/image";
+
 import Container from "../Container";
+import { teamData } from "./data";
 import styles from "./page.module.scss";
 import { TeamProps } from "./types";
-import { teamData } from "./data";
 
-const Team = ({ className }: TeamProps) => {
+const Team: FC<TeamProps> = ({ className }) => {
   return (
     <section className={`${styles.team} ${className || ""}`}>
       <Container>
@@ -33,3 +35,4 @@ const Team = ({ className }: TeamProps) => {
 };
 
 export default Team;
+export type { TeamProps } from "./types";

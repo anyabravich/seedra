@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import styles from "./page.module.scss";
+import { FC, useState } from "react";
 import { motion } from "framer-motion";
+
 import Icons from "../Icons";
+import styles from "./page.module.scss";
 import { IAccordion } from "./types";
 
-const Accordion = ({ title, children }: IAccordion) => {
+const Accordion: FC<IAccordion> = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,3 +40,4 @@ const Accordion = ({ title, children }: IAccordion) => {
 };
 
 export default Accordion;
+export type { IAccordion } from "./types";

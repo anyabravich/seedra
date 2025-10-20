@@ -1,38 +1,46 @@
 "use client";
-import React, { useState } from "react";
+import React, { FC } from "react";
 import styles from "./page.module.scss";
 import Icons from "../Icons";
 import { IQuantity } from "./types";
 
-const Quantity = ({ className, handleQuantityChange }: IQuantity) => {
-  const [quantity, setQuantity] = useState(1);
-
+const Quantity: FC<IQuantity> = ({ 
+  value, 
+  onChange, 
+  min = 1, 
+  max, 
+  className 
+}) => {
   const handleIncrement = () => {
-    setQuantity(quantity + 1);
-    handleQuantityChange(quantity + 1);
+    const newValue = value + 1;
+    if (!max || newValue <= max) {
+      onChange(newValue);
+    }
   };
 
   const handleDecrement = () => {
-    if (quantity <= 1) return;
-    setQuantity(quantity - 1);
-    handleQuantityChange(quantity - 1);
+    const newValue = value - 1;
+    if (newValue >= min) {
+      onChange(newValue);
+    }
   };
 
   return (
-    <div className={`${styles.root} ${className}`}>
+    <div className={`${styles.root} ${className || ""}`}>
       <button
         className={styles.button}
         type="button"
         onClick={handleDecrement}
-        disabled={quantity <= 1}
+        disabled={value <= min}
       >
         <Icons iconName="minus" />
       </button>
-      <output className={styles.value}>{quantity}</output>
+      <output className={styles.value}>{value}</output>
       <button
         className={styles.button}
         type="button"
         onClick={handleIncrement}
+        disabled={max ? value >= max : false}
       >
         <Icons iconName="plus" />
       </button>
@@ -41,3 +49,4 @@ const Quantity = ({ className, handleQuantityChange }: IQuantity) => {
 };
 
 export default Quantity;
+export type { IQuantity } from "./types";

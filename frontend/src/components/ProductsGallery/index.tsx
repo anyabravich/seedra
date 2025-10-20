@@ -1,5 +1,7 @@
 "use client";
 
+import { FC, useState } from "react";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
@@ -7,12 +9,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import Image from "next/image";
-import { useState } from "react";
 import { SLIDES } from "./data";
 import { Swiper as SwiperType } from "./types";
 
-const ProductsGallery = () => {
+const ProductsGallery: FC = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   return (
@@ -36,7 +36,7 @@ const ProductsGallery = () => {
         ))}
       </Swiper>
       <Swiper
-        onSwiper={(swiper) => setThumbsSwiper(swiper)}
+        onSwiper={swiper => setThumbsSwiper(swiper)}
         spaceBetween={8}
         slidesPerView={"auto"}
         freeMode={true}

@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
-import styles from "./page.module.scss";
+import { FC, useState } from "react";
+
 import Icons from "../Icons";
 import Filters from "../Filters";
-import { ISearch } from "./types";
 import { useClickOutside } from "@/hooks/useClickOutside";
+import styles from "./page.module.scss";
+import { ISearch } from "./types";
 
-const Search = ({ className }: ISearch) => {
+const Search: FC<ISearch> = ({ className }) => {
   const [isOpenFilters, setIsOpenFilters] = useState(false);
 
   const ref = useClickOutside<HTMLFormElement>({
@@ -39,3 +40,4 @@ const Search = ({ className }: ISearch) => {
 };
 
 export default Search;
+export type { ISearch } from "./types";

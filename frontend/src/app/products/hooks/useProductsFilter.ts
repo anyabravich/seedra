@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { IProduct } from "@/components/Products/types";
+import { IProduct } from "@/hooks/useProductFilter/types";
 
 export const useProductsFilter = (products: IProduct[]) => {
   const [category, setCategory] = useState("all");

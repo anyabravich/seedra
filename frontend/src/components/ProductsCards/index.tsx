@@ -1,16 +1,15 @@
-import styles from "./page.module.scss";
+import { FC } from "react";
 
 import Card from "../Card";
-import { IProduct } from "../Products/types";
+import { IProduct } from "@/hooks/useProductFilter/types";
+import styles from "./page.module.scss";
 
-const ProductsCards = ({
-  products: { cards },
-}: {
+const ProductsCards: FC<{
   products: { cards: IProduct[] };
-}) => {
+}> = ({ products: { cards } }) => {
   return (
     <div className={styles["products-cards"]}>
-      {cards.map((props) => (
+      {cards.map(props => (
         <Card key={props.id} {...props} />
       ))}
     </div>

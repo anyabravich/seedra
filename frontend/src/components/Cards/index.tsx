@@ -1,15 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import styles from "./page.module.scss";
-import Card from "../Card";
+import { FC, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { IProduct } from "../Products/types";
 
-const Cards = ({ cards }: { cards: IProduct[] }) => {
+import Card from "../Card";
+import { IProduct } from "@/hooks/useProductFilter/types";
+import styles from "./page.module.scss";
+
+const Cards: FC<{ cards: IProduct[] }> = ({ cards }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [hasMounted, setHasMounted] = useState(false);
 

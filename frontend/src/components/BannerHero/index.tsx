@@ -1,8 +1,10 @@
-import styles from "./page.module.scss";
+import { FC } from "react";
 import cn from "classnames";
+
+import styles from "./page.module.scss";
 import { BannerHeroProps } from "./types";
 
-const BannerHero = ({ title, text, className }: BannerHeroProps) => {
+const BannerHero: FC<BannerHeroProps> = ({ title, text, className }) => {
   return (
     <div className={cn(styles.bannerHero, className)}>
       <h1 className={cn(styles.title, "h1")}>{title}</h1>
@@ -12,3 +14,4 @@ const BannerHero = ({ title, text, className }: BannerHeroProps) => {
 };
 
 export default BannerHero;
+export type { BannerHeroProps } from "./types";
